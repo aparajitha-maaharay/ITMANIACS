@@ -6565,7 +6565,7 @@ h4.asd label {
 		width: 50%;
 	}
 }
-@media(max-width:1080px){
+@media(max-width:1440px){
 	.logo a {
 		padding: 0.9em 2.35em .7em;
 	}
@@ -6573,8 +6573,8 @@ h4.asd label {
 		width: 52%;
 	}
 	.cbp-spmenu-push div#page-wrapper {
-		margin:0 0 0 14.5em;
-		padding: 5em 1em 2em;
+		margin:0 0 0 13.5em;
+		padding: 1em 1em 2em;
 	}
 	.sidebar ul li {
 		margin-bottom: 0.8em;

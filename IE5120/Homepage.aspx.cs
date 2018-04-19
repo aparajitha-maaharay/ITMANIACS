@@ -16,9 +16,8 @@ namespace IE5120
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Session["culture"] = "Italian";
+            Session["culture"] = "Italian";//Once access session redirect to school page
             Response.Redirect("Schools.aspx");
-            //Response.Redirect("http://www.google.com");
         }
 
         protected void LinkButton2_Click(object sender, EventArgs e)

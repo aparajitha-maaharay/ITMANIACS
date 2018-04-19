@@ -10,6 +10,7 @@ namespace IE5120
 {
     public partial class Details : System.Web.UI.Page
     {
+        //initial a few variable need to be displayed on web page
         public string name = "";
         public int icsea = 0;
         public int t_stuff = 0;
@@ -33,12 +34,16 @@ namespace IE5120
         public int per_2016 = 0;
         public int per_2017 = 0;
         public int per_2014 = 0;
+        public int per_2013 = 0;
         public double lat = 0.0;
         public double lng = 0.0;
+        public string language = "";
+        public string phone = "";
+        public string address = "";
         //public string link = "";
         protected void Page_Load(object sender, EventArgs e)
-        {
-            string schoolcode = Request.QueryString["schoolcode"];
+        {            
+            string schoolcode = Request.QueryString["schoolcode"];//access the request object from schools.aspx
             string conn = "Data Source=ie5120mysql.cgos91z1jnbd.ap-southeast-2.rds.amazonaws.com;User ID=itmaniacs;Password=itmaniacs;DataBase=ie5120mysql";
             MySqlConnection con = new MySqlConnection(conn);
             string sql = "select * from schools where schoolcode='" + schoolcode + "'";
@@ -65,20 +70,34 @@ namespace IE5120
                 year5male = Convert.ToInt16(dr["Year5MalesTotal"].ToString());
                 year6female = Convert.ToInt16(dr["Year6FemalesTotal"].ToString());
                 year6male = Convert.ToInt16(dr["Year6MalesTotal"].ToString());
+                language = dr["language"].ToString();
                 icsea = Convert.ToInt16(icseavalue);
                 total = Convert.ToInt16(dr["PrimaryTotal"].ToString());
+                string percent_2013 = dr["NOTENGLISH2013"].ToString();
                 string percent_2014 = dr["NOTENGLISH2014"].ToString();
                 string percent_2015 = dr["NOTENGLISH2015"].ToString();
                 string percent_2016 = dr["NOTENGLISH2016"].ToString();
                 string percent_2017 = dr["NOTENGLISH2017"].ToString();
-                string substr2014 = percent_2014.Substring(0, percent_2014.Length - 1);
-                per_2014 = Convert.ToInt16(substr2014);
-                string substr2015 = percent_2015.Substring(0,percent_2015.Length-1);
-                per_2015 = Convert.ToInt16(substr2015);
-                string substr2016 = percent_2016.Substring(0, percent_2016.Length - 1);
-                per_2016 = Convert.ToInt16(substr2016);
-                string substr2017 = percent_2017.Substring(0, percent_2017.Length - 1);
-                per_2017 = Convert.ToInt16(substr2017);
+                phone = dr["phonenumber"].ToString();
+                address = dr["formatted_address"].ToString();
+                double tmp2013 = Convert.ToDouble(percent_2013) * 100;
+                per_2013 = Convert.ToInt16(tmp2013);
+                double tmp2014 = Convert.ToDouble(percent_2014)*100;
+                per_2014 = Convert.ToInt16(tmp2014);
+                double tmp2015 = Convert.ToDouble(percent_2015) * 100;
+                per_2015 = Convert.ToInt16(tmp2015);
+                double tmp2016 = Convert.ToDouble(percent_2016) * 100;
+                per_2016 = Convert.ToInt16(tmp2016);
+                double tmp2017 = Convert.ToDouble(percent_2017) * 100;
+                per_2017 = Convert.ToInt16(tmp2017);
+                //string substr2014 = percent_2014.Substring(0, percent_2014.Length - 1);
+                //per_2014 = Convert.ToInt16(substr2014);
+                //string substr2015 = percent_2015.Substring(0,percent_2015.Length-1);
+                //per_2015 = Convert.ToInt16(substr2015);
+                //string substr2016 = percent_2016.Substring(0, percent_2016.Length - 1);
+                //per_2016 = Convert.ToInt16(substr2016);
+                //string substr2017 = percent_2017.Substring(0, percent_2017.Length - 1);
+                //per_2017 = Convert.ToInt16(substr2017);
                 string strlat = dr["latitude"].ToString();
                 string strlng = dr["longitude"].ToString();
                 lat = Convert.ToDouble(strlat);

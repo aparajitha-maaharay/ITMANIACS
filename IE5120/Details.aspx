@@ -14,9 +14,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     /* Always set the map height explicitly to define the size of the div
       * element that contains the map. */
     #map {
-        height: 247px;
+        height: 230px;
         width: 420px;
     }
+    #chartdiv1 {
+  width: 100%;
+  height: 295px;
+}
 </style>
 <!-- Bootstrap Core CSS -->
 <link href="dv/css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -50,10 +54,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <link href="dv/css/custom.css" rel="stylesheet">
 <!--//Metis Menu -->
 <style>
-#chartdiv {
-  width: 100%;
-  height: 295px;
-}
+    #chartdiv {
+        width: 100%;
+        height: 295px;
+    }
 </style>
 <!--pie-chart --><!-- index page sales reviews visitors pie chart -->
 <script src="dv/js/pie-chart.js" type="text/javascript"></script>
@@ -70,38 +74,38 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
              }
          });
 
-            $('#demo-pie-1').pieChart({
-                barColor: '#2dde98',
-                trackColor: '#eee',
-                lineCap: 'round',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
+         $('#demo-pie-1').pieChart({
+             barColor: '#2dde98',
+             trackColor: '#eee',
+             lineCap: 'round',
+             lineWidth: 8,
+             onStep: function (from, to, percent) {
+                 $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+             }
+         });
 
-            $('#demo-pie-2').pieChart({
-                barColor: '#8e43e7',
-                trackColor: '#eee',
-                lineCap: 'butt',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
+         $('#demo-pie-2').pieChart({
+             barColor: '#8e43e7',
+             trackColor: '#eee',
+             lineCap: 'butt',
+             lineWidth: 8,
+             onStep: function (from, to, percent) {
+                 $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+             }
+         });
 
-            $('#demo-pie-3').pieChart({
-                barColor: '#ffc168',
-                trackColor: '#eee',
-                lineCap: 'square',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
+         $('#demo-pie-3').pieChart({
+             barColor: '#ffc168',
+             trackColor: '#eee',
+             lineCap: 'square',
+             lineWidth: 8,
+             onStep: function (from, to, percent) {
+                 $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+             }
+         });
 
            
-        });
+     });
 
     </script>
 <!-- //pie-chart --><!-- index page sales reviews visitors pie chart -->
@@ -110,51 +114,32 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 					<link href="dv/css/owl.carousel.css" rel="stylesheet">
 					<script src="dv/js/owl.carousel.js"></script>
 						<script>
-							$(document).ready(function() {
-								$("#owl-demo").owlCarousel({
-									items : 3,
-									lazyLoad : true,
-									autoPlay : true,
-									pagination : true,
-									nav:true,
-								});
-							});
+						    $(document).ready(function() {
+						        $("#owl-demo").owlCarousel({
+						            items : 3,
+						            lazyLoad : true,
+						            autoPlay : true,
+						            pagination : true,
+						            nav:true,
+						        });
+						    });
 						</script>
-					<!-- //requried-jsfiles-for owl -->
+					<!-- //requried-jsfiles-for owl -->
+
 </head>
 <body class="cbp-spmenu-push">
     <form id="form1" runat="server">
     <div class="main-content">
-	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
-		<!--left-fixed -navigation-->
-		<aside class="sidebar-left">
-      <nav class="navbar navbar-inverse">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".collapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <h1><a class="navbar-brand" href="Homepage.aspx"><span class="fa fa-area-chart"></span>IT MANIACS<span class="dashboard_text">Design dashboard</span></a></h1>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="sidebar-menu">
-              <li class="treeview">
-                <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                </a>
-              </li>			                     			  
-            </ul>
-          </div>
-          <!-- /.navbar-collapse -->
-      </nav>
-    </aside>
-	</div>
+        <a href="Homepage.aspx"><img src="./images/logocul.png" height="60px" style="margin-left:240px;margin-top:10px" /></a>
 		<!--left-fixed -navigation-->		
 		<!-- main content start-->
-		<div id="page-wrapper">
-			<div class="main-page">
+		<div id="page-wrapper" style="background-color:#ffffff">
+            <h1><%=name %></h1>
+            <h3>Phone: <%=phone %></h3>
+            <h3>Address: <%=address %></h3>
+            <a href="#" onclick="window.open('Map.aspx?lat=<%=lat %>&lng=<%=lng %>','popUpWindow','height=400,width=400,left=300,top=200,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">show on map</a>            
+           
+			<div class="main-page" style="background-color:#ffffff;margin-top:20px">            
 			<div class="col_3">
         	<div class="col-md-3 widget widget1">
         		<div class="r3_counter_box">
@@ -174,7 +159,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
         	</div>
-        	<div class="col-md-3 widget widget1">
+        	<%--<div class="col-md-3 widget widget1">
         		<div class="r3_counter_box">
                     <i class="pull-left fa fa-money user2 icon-rounded"></i>
                     <div class="stats">
@@ -182,7 +167,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                       <span>Non teaching staff</span>
                     </div>
                 </div>
-        	</div>
+        	</div>--%>
         	<div class="col-md-3 widget widget1">
         		<div class="r3_counter_box">
                     <i class="pull-left fa fa-pie-chart dollar1 icon-rounded"></i>
@@ -196,7 +181,18 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 		
 		<div class="row-one widgettable">
-            <div class="col-md-4 charts-grids widget">
+             <div class="col-md-7 content-top-2 card" style="width:40%;height:320px">
+				<div class="agileinfo-cdr">
+					<div class="card-header">
+                        <h3>Non-English Background Percentange</h3>
+                    </div>
+					
+						<div id="Linegraph" style="width: 98%; height: 270px">
+						</div>
+						
+				</div>
+			</div>
+            <div class="col-md-4 charts-grids widget" style="width:40%;margin-left:20px">
 						<div class="card-header">
 							<h3><%=name %></h3>
 						</div>
@@ -204,54 +200,17 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 						<div id="container" style="width: 100%; height:270px;">
 							<canvas id="canvas"></canvas>
 						</div>
-						<div id="map"></div>
+						
 			</div>
-            			
-			<div class="col-md-3 stat">
-                <div class="content-top-1">
-				<div class="col-md-6 top-content">
-					<h5>Non-English background</h5>
-					<label>2014</label>
-				</div>
-				<div class="col-md-6 top-content1">	   
-					<div id="demo-pie-0" class="pie-title-center" data-percent="<%=per_2014 %>""> <span class="pie-value"></span> </div>
-				</div>
-				 <div class="clearfix"> </div>
-				</div>
-				<div class="content-top-1">
-				<div class="col-md-6 top-content">
-					<h5>Non-English background</h5>
-					<label>2015</label>
-				</div>
-				<div class="col-md-6 top-content1">	   
-					<div id="demo-pie-1" class="pie-title-center" data-percent="<%=per_2015 %>""> <span class="pie-value"></span> </div>
-				</div>
-				 <div class="clearfix"> </div>
-				</div>
-				<div class="content-top-1">
-				<div class="col-md-6 top-content">
-					<h5>Non-English background</h5>
-					<label>2016</label>
-				</div>
-				<div class="col-md-6 top-content1">	   
-					<div id="demo-pie-2" class="pie-title-center" data-percent="<%=per_2016 %>"> <span class="pie-value"></span> </div>
-				</div>
-				 <div class="clearfix"> </div>
-				</div>
-				<div class="content-top-1">
-				<div class="col-md-6 top-content">
-					<h5>Non-English background</h5>
-					<label>2017</label>
-				</div>
-				<div class="col-md-6 top-content1">	   
-					<div id="demo-pie-3" class="pie-title-center" data-percent="<%=per_2017 %>"> <span class="pie-value"></span> </div>
-				</div>
-				 <div class="clearfix"> </div>
-				</div>
-			</div>
+           
+            
+	
+			
+
 
 			<div class="clearfix"> </div>
 		</div>
+                
 	<!-- for amcharts js -->
 			<script src="dv/js/amcharts.js"></script>
 			<script src="dv/js/serial.js"></script>
@@ -263,12 +222,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <script  src="dv/js/index1.js"></script>
 			</div>
 		</div>
-	<!--footer-->
-	<div class="footer">
-	   <p>COPYRIGHT. 2018. IT MANIACS</p>		
+        
 	</div>
-    <!--//footer-->
-	</div>
+        
 		
 	<!-- new added graphs chart js-->
 	
@@ -276,16 +232,16 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <script src="dv/js/utils.js"></script>
 	
 	<script>
-        var MONTHS = ["Prep", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "August", "September", "October", "November", "December"];
-        var color = Chart.helpers.color;
-        var barChartData = {
-            labels: ["Prep", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"],
-            datasets: [{
-                label: 'Female',
-                backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
-                borderColor: window.chartColors.red,
-                borderWidth: 1,
-                data: [
+	    var MONTHS = ["Prep", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "August", "September", "October", "November", "December"];
+	    var color = Chart.helpers.color;
+	    var barChartData = {
+	        labels: ["Prep", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"],
+	        datasets: [{
+	            label: 'Female',
+	            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+	            borderColor: window.chartColors.red,
+	            borderWidth: 1,
+	            data: [
                     <%=yearpfemale%>,
                     <%=year1female%>,
                     <%=year2female%>,
@@ -293,13 +249,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                     <%=year4female%>,
                     <%=year5female%>,
                     <%=year6female%>
-                ]
-            }, {
-                label: 'Male',
-                backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
-                borderColor: window.chartColors.blue,
-                borderWidth: 1,
-                data: [
+	            ]
+	        }, {
+	            label: 'Male',
+	            backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+	            borderColor: window.chartColors.blue,
+	            borderWidth: 1,
+	            data: [
                     <%=yearpmale%>,
                     <%=year1male%>,
                     <%=year2male%>,
@@ -307,108 +263,108 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                     <%=year4male%>,
                     <%=year5male%>,
                     <%=year6male%>
-                ]
-            }]
+	            ]
+	        }]
 
-        };
+	    };
 
-        window.onload = function() {
-            var ctx = document.getElementById("canvas").getContext("2d");
-            window.myBar = new Chart(ctx, {
-                type: 'bar',
-                data: barChartData,
-                options: {
-                    responsive: true,
-                    legend: {
-                        position: 'top',
-                    }
-                }
-            });
+	    window.onload = function() {
+	        var ctx = document.getElementById("canvas").getContext("2d");
+	        window.myBar = new Chart(ctx, {
+	            type: 'bar',
+	            data: barChartData,
+	            options: {
+	                responsive: true,
+	                legend: {
+	                    position: 'top',
+	                }
+	            }
+	        });
 
-        };
+	    };
 
-        document.getElementById('randomizeData').addEventListener('click', function() {
-            var zero = Math.random() < 0.2 ? true : false;
-            barChartData.datasets.forEach(function(dataset) {
-                dataset.data = dataset.data.map(function() {
-                    return zero ? 0.0 : randomScalingFactor();
-                });
+	    document.getElementById('randomizeData').addEventListener('click', function() {
+	        var zero = Math.random() < 0.2 ? true : false;
+	        barChartData.datasets.forEach(function(dataset) {
+	            dataset.data = dataset.data.map(function() {
+	                return zero ? 0.0 : randomScalingFactor();
+	            });
 
-            });
-            window.myBar.update();
-        });
+	        });
+	        window.myBar.update();
+	    });
 
-        var colorNames = Object.keys(window.chartColors);
-        document.getElementById('addDataset').addEventListener('click', function() {
-            var colorName = colorNames[barChartData.datasets.length % colorNames.length];;
-            var dsColor = window.chartColors[colorName];
-            var newDataset = {
-                label: 'Dataset ' + barChartData.datasets.length,
-                backgroundColor: color(dsColor).alpha(0.5).rgbString(),
-                borderColor: dsColor,
-                borderWidth: 1,
-                data: []
-            };
+	    var colorNames = Object.keys(window.chartColors);
+	    document.getElementById('addDataset').addEventListener('click', function() {
+	        var colorName = colorNames[barChartData.datasets.length % colorNames.length];;
+	        var dsColor = window.chartColors[colorName];
+	        var newDataset = {
+	            label: 'Dataset ' + barChartData.datasets.length,
+	            backgroundColor: color(dsColor).alpha(0.5).rgbString(),
+	            borderColor: dsColor,
+	            borderWidth: 1,
+	            data: []
+	        };
 
-            for (var index = 0; index < barChartData.labels.length; ++index) {
-                newDataset.data.push(randomScalingFactor());
-            }
+	        for (var index = 0; index < barChartData.labels.length; ++index) {
+	            newDataset.data.push(randomScalingFactor());
+	        }
 
-            barChartData.datasets.push(newDataset);
-            window.myBar.update();
-        });
+	        barChartData.datasets.push(newDataset);
+	        window.myBar.update();
+	    });
 
-        document.getElementById('addData').addEventListener('click', function() {
-            if (barChartData.datasets.length > 0) {
-                var month = MONTHS[barChartData.labels.length % MONTHS.length];
-                barChartData.labels.push(month);
+	    document.getElementById('addData').addEventListener('click', function() {
+	        if (barChartData.datasets.length > 0) {
+	            var month = MONTHS[barChartData.labels.length % MONTHS.length];
+	            barChartData.labels.push(month);
 
-                for (var index = 0; index < barChartData.datasets.length; ++index) {
-                    //window.myBar.addData(randomScalingFactor(), index);
-                    barChartData.datasets[index].data.push(randomScalingFactor());
-                }
+	            for (var index = 0; index < barChartData.datasets.length; ++index) {
+	                //window.myBar.addData(randomScalingFactor(), index);
+	                barChartData.datasets[index].data.push(randomScalingFactor());
+	            }
 
-                window.myBar.update();
-            }
-        });
+	            window.myBar.update();
+	        }
+	    });
 
-        document.getElementById('removeDataset').addEventListener('click', function() {
-            barChartData.datasets.splice(0, 1);
-            window.myBar.update();
-        });
+	    document.getElementById('removeDataset').addEventListener('click', function() {
+	        barChartData.datasets.splice(0, 1);
+	        window.myBar.update();
+	    });
 
-        document.getElementById('removeData').addEventListener('click', function() {
-            barChartData.labels.splice(-1, 1); // remove the label first
+	    document.getElementById('removeData').addEventListener('click', function() {
+	        barChartData.labels.splice(-1, 1); // remove the label first
 
-            barChartData.datasets.forEach(function(dataset, datasetIndex) {
-                dataset.data.pop();
-            });
+	        barChartData.datasets.forEach(function(dataset, datasetIndex) {
+	            dataset.data.pop();
+	        });
 
-            window.myBar.update();
-        });
+	        window.myBar.update();
+	    });
     </script>
 	<!-- new added graphs chart js-->
 	
 	<!-- Classie --><!-- for toggle left push menu script -->
 		<script src="dv/js/classie.js"></script>
 		<script>
-			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+		    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 				showLeftPush = document.getElementById( 'showLeftPush' ),
 				body = document.body;
 				
-			showLeftPush.onclick = function() {
-				classie.toggle( this, 'active' );
-				classie.toggle( body, 'cbp-spmenu-push-toright' );
-				classie.toggle( menuLeft, 'cbp-spmenu-open' );
-				disableOther( 'showLeftPush' );
-			};
+		    showLeftPush.onclick = function() {
+		        classie.toggle( this, 'active' );
+		        classie.toggle( body, 'cbp-spmenu-push-toright' );
+		        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+		        disableOther( 'showLeftPush' );
+		    };
 			
 
-			function disableOther( button ) {
-				if( button !== 'showLeftPush' ) {
-					classie.toggle( showLeftPush, 'disabled' );
-				}
-			}
+		    function disableOther( button ) {
+		        if( button !== 'showLeftPush' ) {
+		            classie.toggle( showLeftPush, 'disabled' );
+		        }
+		    }
 		</script>
 	<!-- //Classie --><!-- //for toggle left push menu script -->
 		
@@ -420,7 +376,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- side nav js -->
 	<script src='dv/js/SidebarNav.min.js' type='text/javascript'></script>
 	<script>
-      $('.sidebar-menu').SidebarNav()
+	    $('.sidebar-menu').SidebarNav()
     </script>
 	<!-- //side nav js -->
 	
@@ -431,118 +387,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             linecolor: "#CCA300",
             title: "Monday",
             values: [
-            { X: "6:00", Y: 10.00 },
-            { X: "7:00", Y: 20.00 },
-            { X: "8:00", Y: 40.00 },
-            { X: "9:00", Y: 34.00 },
-            { X: "10:00", Y: 40.25 },
-            { X: "11:00", Y: 28.56 },
-            { X: "12:00", Y: 18.57 },
-            { X: "13:00", Y: 34.00 },
-            { X: "14:00", Y: 40.89 },
-            { X: "15:00", Y: 12.57 },
-            { X: "16:00", Y: 28.24 },
-            { X: "17:00", Y: 18.00 },
-            { X: "18:00", Y: 34.24 },
-            { X: "19:00", Y: 40.58 },
-            { X: "20:00", Y: 12.54 },
-            { X: "21:00", Y: 28.00 },
-            { X: "22:00", Y: 18.00 },
-            { X: "23:00", Y: 34.89 },
-            { X: "0:00", Y: 40.26 },
-            { X: "1:00", Y: 28.89 },
-            { X: "2:00", Y: 18.87 },
-            { X: "3:00", Y: 34.00 },
-            { X: "4:00", Y: 40.00 }
+            { X: "2013", Y: <%=per_2013%> },
+            { X: "2014", Y: <%=per_2014%> },
+            { X: "2015", Y: <%=per_2015%> },
+            { X: "2016", Y: <%=per_2016%> },
+            { X: "2017", Y: <%=per_2017%> }
             ]
         };
-        var graphdata2 = {
-            linecolor: "#00CC66",
-            title: "Tuesday",
-            values: [
-              { X: "6:00", Y: 100.00 },
-            { X: "7:00", Y: 120.00 },
-            { X: "8:00", Y: 140.00 },
-            { X: "9:00", Y: 134.00 },
-            { X: "10:00", Y: 140.25 },
-            { X: "11:00", Y: 128.56 },
-            { X: "12:00", Y: 118.57 },
-            { X: "13:00", Y: 134.00 },
-            { X: "14:00", Y: 140.89 },
-            { X: "15:00", Y: 112.57 },
-            { X: "16:00", Y: 128.24 },
-            { X: "17:00", Y: 118.00 },
-            { X: "18:00", Y: 134.24 },
-            { X: "19:00", Y: 140.58 },
-            { X: "20:00", Y: 112.54 },
-            { X: "21:00", Y: 128.00 },
-            { X: "22:00", Y: 118.00 },
-            { X: "23:00", Y: 134.89 },
-            { X: "0:00", Y: 140.26 },
-            { X: "1:00", Y: 128.89 },
-            { X: "2:00", Y: 118.87 },
-            { X: "3:00", Y: 134.00 },
-            { X: "4:00", Y: 180.00 }
-            ]
-        };
-        var graphdata3 = {
-            linecolor: "#FF99CC",
-            title: "Wednesday",
-            values: [
-              { X: "6:00", Y: 230.00 },
-            { X: "7:00", Y: 210.00 },
-            { X: "8:00", Y: 214.00 },
-            { X: "9:00", Y: 234.00 },
-            { X: "10:00", Y: 247.25 },
-            { X: "11:00", Y: 218.56 },
-            { X: "12:00", Y: 268.57 },
-            { X: "13:00", Y: 274.00 },
-            { X: "14:00", Y: 280.89 },
-            { X: "15:00", Y: 242.57 },
-            { X: "16:00", Y: 298.24 },
-            { X: "17:00", Y: 208.00 },
-            { X: "18:00", Y: 214.24 },
-            { X: "19:00", Y: 214.58 },
-            { X: "20:00", Y: 211.54 },
-            { X: "21:00", Y: 248.00 },
-            { X: "22:00", Y: 258.00 },
-            { X: "23:00", Y: 234.89 },
-            { X: "0:00", Y: 210.26 },
-            { X: "1:00", Y: 248.89 },
-            { X: "2:00", Y: 238.87 },
-            { X: "3:00", Y: 264.00 },
-            { X: "4:00", Y: 270.00 }
-            ]
-        };
-        var graphdata4 = {
-            linecolor: "Random",
-            title: "Thursday",
-            values: [
-              { X: "6:00", Y: 300.00 },
-            { X: "7:00", Y: 410.98 },
-            { X: "8:00", Y: 310.00 },
-            { X: "9:00", Y: 314.00 },
-            { X: "10:00", Y: 310.25 },
-            { X: "11:00", Y: 318.56 },
-            { X: "12:00", Y: 318.57 },
-            { X: "13:00", Y: 314.00 },
-            { X: "14:00", Y: 310.89 },
-            { X: "15:00", Y: 512.57 },
-            { X: "16:00", Y: 318.24 },
-            { X: "17:00", Y: 318.00 },
-            { X: "18:00", Y: 314.24 },
-            { X: "19:00", Y: 310.58 },
-            { X: "20:00", Y: 312.54 },
-            { X: "21:00", Y: 318.00 },
-            { X: "22:00", Y: 318.00 },
-            { X: "23:00", Y: 314.89 },
-            { X: "0:00", Y: 310.26 },
-            { X: "1:00", Y: 318.89 },
-            { X: "2:00", Y: 518.87 },
-            { X: "3:00", Y: 314.00 },
-            { X: "4:00", Y: 310.00 }
-            ]
-        };
+                
         var Piedata = {
             linecolor: "Random",
             title: "Profit",
@@ -564,31 +416,17 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 axiscolor: "#E6E6E6",
                 textcolor: "#6E6E6E",
                 showlegends: true,
-                data: [graphdata4, graphdata3, graphdata2, graphdata1],
+                data: [graphdata1],
                 legendsize: "140",
                 legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
+                xaxislabel: 'Years',
+                yaxislabel: 'Percentage %'
             });
             $("#sltchartype").on('change', function () {
                 $("#Bargraph").SimpleChart('ChartType', $(this).val());
                 $("#Bargraph").SimpleChart('reload', 'true');
             });
-            $("#Hybridgraph").SimpleChart({
-                ChartType: "Hybrid",
-                toolwidth: "50",
-                toolheight: "25",
-                axiscolor: "#E6E6E6",
-                textcolor: "#6E6E6E",
-                showlegends: true,
-                data: [graphdata4],
-                legendsize: "140",
-                legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
-            });
+            
             $("#Linegraph").SimpleChart({
                 ChartType: "Line",
                 toolwidth: "50",
@@ -596,12 +434,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 axiscolor: "#E6E6E6",
                 textcolor: "#6E6E6E",
                 showlegends: false,
-                data: [graphdata4, graphdata3, graphdata2, graphdata1],
+                data: [graphdata1],
                 legendsize: "140",
                 legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
+                xaxislabel: 'Years',
+                yaxislabel: 'Percentage %'
             });
             $("#Areagraph").SimpleChart({
                 ChartType: "Area",
@@ -610,12 +447,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 axiscolor: "#E6E6E6",
                 textcolor: "#6E6E6E",
                 showlegends: true,
-                data: [graphdata4, graphdata3, graphdata2, graphdata1],
+                data: [graphdata1],
                 legendsize: "140",
                 legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
+                xaxislabel: 'Years',
+                yaxislabel: 'Percentage %'
             });
             $("#Scatterredgraph").SimpleChart({
                 ChartType: "Scattered",
@@ -624,12 +460,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 axiscolor: "#E6E6E6",
                 textcolor: "#6E6E6E",
                 showlegends: true,
-                data: [graphdata4, graphdata3, graphdata2, graphdata1],
+                data: [graphdata1],
                 legendsize: "140",
                 legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
+                xaxislabel: 'Years',
+                yaxislabel: 'Percentage %'
             });
             $("#Piegraph").SimpleChart({
                 ChartType: "Pie",
@@ -642,9 +477,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 data: [Piedata],
                 legendsize: "250",
                 legendposition: 'right',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
+                xaxislabel: 'Years',
+                yaxislabel: 'Percentage %'
             });
 
             $("#Stackedbargraph").SimpleChart({
@@ -654,12 +488,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 axiscolor: "#E6E6E6",
                 textcolor: "#6E6E6E",
                 showlegends: true,
-                data: [graphdata3, graphdata2, graphdata1],
+                data: [graphdata1],
                 legendsize: "140",
                 legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
+                xaxislabel: 'Years',
+                yaxislabel: 'Percentage %'
             });
 
             $("#StackedHybridbargraph").SimpleChart({
@@ -669,12 +502,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 axiscolor: "#E6E6E6",
                 textcolor: "#6E6E6E",
                 showlegends: true,
-                data: [graphdata3, graphdata2, graphdata1],
+                data: [graphdata1],
                 legendsize: "140",
                 legendposition: 'bottom',
-                xaxislabel: 'Hours',
-                title: 'Weekly Profit',
-                yaxislabel: 'Profit in $'
+                xaxislabel: 'Years',
+                yaxislabel: 'Percentage %'
             });
         });
 
@@ -684,18 +516,19 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	
 	<!-- Bootstrap Core JavaScript -->
    <script src="dv/js/bootstrap.js"> </script>
-	<!-- //Bootstrap Core JavaScript -->    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: <%=lat%>, lng: <%=lng%> },
-          zoom: 16
-        });
-        var marker = new google.maps.Marker({
-            position: { lat: <%=lat%>, lng: <%=lng%> },
-            map: map
-        });
-      }
+	<!-- //Bootstrap Core JavaScript -->
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: <%=lat%>, lng: <%=lng%> },
+                zoom: 16
+            });
+            var marker = new google.maps.Marker({
+                position: { lat: <%=lat%>, lng: <%=lng%> },
+                map: map
+            });
+        }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKlKmzz6EFwx1wD-4DHTFydRELwHNp2kA&callback=initMap"
         async defer></script>

@@ -18,11 +18,10 @@ namespace IE5120
         {
             string uname = TextBox1.Text;
             string pwd = TextBox2.Text;
-            
+            Session["uname"] = uname;
+            Session["pwd"] = pwd;
             if (uname.Equals("ITMANIACS")&&pwd.Equals("ITMANIACS"))
-            {
-                Session["uname"] = uname;
-                Session["pwd"] = pwd;
+            {                
                 Response.Redirect("Homepage.aspx");
             }
             else

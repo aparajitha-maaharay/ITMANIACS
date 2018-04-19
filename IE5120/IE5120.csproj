@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,6 +70,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-grid.css" />
+    <Content Include="bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="Communities.aspx" />
+    <Content Include="css\main.css" />
     <Content Include="Details.aspx" />
     <Content Include="dv\css\animate.css" />
     <Content Include="dv\css\bootstrap.css" />
@@ -142,6 +155,10 @@
     <Content Include="images\indcul.png" />
     <Content Include="images\itacul.png" />
     <Content Include="images\logocul.png" />
+    <Content Include="images\portfolio\c.jpg" />
+    <Content Include="images\portfolio\in.jpg" />
+    <Content Include="images\portfolio\india2.png" />
+    <Content Include="images\portfolio\it.jpg" />
     <Content Include="images\team\Judd.PNG" />
     <Content Include="images\team\maina.PNG" />
     <Content Include="images\portfolio\chn.png" />
@@ -149,7 +166,60 @@
     <Content Include="images\portfolio\italy.png" />
     <Content Include="images\team\Ollie.PNG" />
     <Content Include="images\team\wei.PNG" />
+    <Content Include="index.html" />
+    <Content Include="indexcss\css\foundation.css" />
+    <Content Include="indexcss\css\foundation.min.css" />
+    <Content Include="indexcss\css\normalize.css" />
+    <Content Include="indexcss\css\responsive.css" />
+    <Content Include="indexcss\css\style.css" />
+    <Content Include="indexcss\images\about-banner.jpg" />
+    <Content Include="indexcss\images\about.jpg" />
+    <Content Include="indexcss\images\b1.jpg" />
+    <Content Include="indexcss\images\b2.jpg" />
+    <Content Include="indexcss\images\b3.jpg" />
+    <Content Include="indexcss\images\b4.jpg" />
+    <Content Include="indexcss\images\coming-bg.jpg" />
+    <Content Include="indexcss\images\cul.jpg" />
+    <Content Include="indexcss\images\cycle.jpg" />
+    <Content Include="indexcss\images\ICON.png" />
+    <Content Include="indexcss\images\logo.png" />
+    <Content Include="indexcss\images\LOGO_1.png" />
+    <Content Include="indexcss\images\flinderbackground.jpg" />
+    <Content Include="indexcss\images\melbourne.jpg" />
+    <Content Include="indexcss\images\service1.jpg" />
+    <Content Include="indexcss\images\service2.jpg" />
+    <Content Include="indexcss\images\service3.jpg" />
+    <Content Include="indexcss\images\slide1.jpg" />
+    <Content Include="indexcss\images\slide2.jpg" />
+    <Content Include="indexcss\images\social.png" />
+    <Content Include="indexcss\js\all.js" />
+    <Content Include="indexcss\js\foundation.min.js" />
+    <Content Include="indexcss\js\foundation\foundation.abide.js" />
+    <Content Include="indexcss\js\foundation\foundation.accordion.js" />
+    <Content Include="indexcss\js\foundation\foundation.alert.js" />
+    <Content Include="indexcss\js\foundation\foundation.clearing.js" />
+    <Content Include="indexcss\js\foundation\foundation.dropdown.js" />
+    <Content Include="indexcss\js\foundation\foundation.equalizer.js" />
+    <Content Include="indexcss\js\foundation\foundation.interchange.js" />
+    <Content Include="indexcss\js\foundation\foundation.joyride.js" />
+    <Content Include="indexcss\js\foundation\foundation.js" />
+    <Content Include="indexcss\js\foundation\foundation.magellan.js" />
+    <Content Include="indexcss\js\foundation\foundation.offcanvas.js" />
+    <Content Include="indexcss\js\foundation\foundation.orbit.js" />
+    <Content Include="indexcss\js\foundation\foundation.reveal.js" />
+    <Content Include="indexcss\js\foundation\foundation.slider.js" />
+    <Content Include="indexcss\js\foundation\foundation.tab.js" />
+    <Content Include="indexcss\js\foundation\foundation.tooltip.js" />
+    <Content Include="indexcss\js\foundation\foundation.topbar.js" />
+    <Content Include="indexcss\js\scripts.js" />
+    <Content Include="indexcss\js\timer.js" />
+    <Content Include="indexcss\js\vendor\fastclick.js" />
+    <Content Include="indexcss\js\vendor\jquery.cookie.js" />
+    <Content Include="indexcss\js\vendor\jquery.js" />
+    <Content Include="indexcss\js\vendor\modernizr.js" />
+    <Content Include="indexcss\js\vendor\placeholder.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Map.aspx" />
     <Content Include="packages.config" />
     <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
@@ -166,6 +236,16 @@
     <Content Include="dv\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="dv\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="dv\js\.DS_Store" />
+    <Content Include="bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap\css\bootstrap.css.map" />
+    <Content Include="bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap\js\bootstrap.js.map" />
+    <Content Include="bootstrap\js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -258,9 +338,20 @@
     <Content Include="img\new.png" />
     <Content Include="img\search.png" />
     <Content Include="Schools.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="SchoolsMap.aspx" />
+    <Content Include="tableau.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Communities.aspx.cs">
+      <DependentUpon>Communities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Communities.aspx.designer.cs">
+      <DependentUpon>Communities.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Details.aspx.cs">
       <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +373,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schools.aspx.cs">
       <DependentUpon>Schools.aspx</DependentUpon>
@@ -289,6 +387,13 @@
     </Compile>
     <Compile Include="Schools.aspx.designer.cs">
       <DependentUpon>Schools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolsMap.aspx.cs">
+      <DependentUpon>SchoolsMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolsMap.aspx.designer.cs">
+      <DependentUpon>SchoolsMap.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
