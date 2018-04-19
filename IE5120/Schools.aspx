@@ -46,11 +46,11 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Select Culture <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton2_Click">China</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton2_Click"><span class="icon-flag"><img src="images/portfolio/chn.png"/></span>China</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton3_Click">India</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton3_Click"><span class="icon-flag"><img src="images/portfolio/india.png"/></span>India</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton1_Click">Italy</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton1_Click"><span class="icon-flag"><img src="images/portfolio/italy.png"/></span>Italy</asp:LinkButton></li>
                                     </ul>
                                </li>
                                <li class=" dropdown">
@@ -124,7 +124,7 @@
                             <div class="main"> 
                                 <br />
                                 <div >
-                                   <a href="Homepage.aspx">Culture</a> > China  <h3 style="color:#387ABC; text-align:center"><b>WELCOME TO CHINESE CULTURE</b></h3>
+                                   <a href="Homepage.aspx">Culture</a> > <% Response.Write(Session["culture"].ToString()); %> <h3 style="color:#387ABC; text-align:center"><b>WELCOME TO <% Response.Write(Session["culture"].ToString().ToUpper()); %> CULTURE</b></h3>
                                    <hr />
                                      
                                     <div class="grid">
@@ -200,10 +200,12 @@
          </div>
      </div>
   </form>
+    
     <!--Maina: footer starts -->
         <div class="copy">
                 Copyright &copy; 2018 IT MANIACS.
         </div>   
        <!--Maina: footer ends -->
+
 </body>
 </html>

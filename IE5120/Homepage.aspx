@@ -53,11 +53,11 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Select Culture <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton2_Click">China</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton2_Click"><span class="icon-flag"><img src="images/portfolio/chn.png"/></span>China</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton3_Click">India</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton3_Click"><span class="icon-flag"><img src="images/portfolio/india.png"/></span>India</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton1_Click">Italy</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton1_Click"><span class="icon-flag"><img src="images/portfolio/italy.png"/></span>Italy</asp:LinkButton></li>
                                     </ul>
                                </li>
                                <li class=" dropdown">

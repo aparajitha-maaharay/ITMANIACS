@@ -17,11 +17,6 @@
     background-size:cover;
 }
 
-
-.copy{
-    margin-top:-48px;
-}
-
 .homepage-caption {
     background-color:rgba(0,0,0,0.4);
     color:white;
@@ -37,9 +32,6 @@
         font-family: Calibri;
 }
 
-.copy homepage-footer {
-    margin-top: 48px;
-}
 
 .navbar navbar-inverse{
     height: 50px;
@@ -54,3 +46,19 @@
     height:100%;
 }
 
+.copy{
+    padding:10px;
+    background-color:black;
+    text-align:center;
+    color:white;
+}
+
+.index-page .copy{
+    margin-top:-32px;
+}
+
+.navbar a .icon-flag img{
+    height:15px;
+    width:auto;
+    margin-right:5px;
+}
