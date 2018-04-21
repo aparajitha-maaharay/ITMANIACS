@@ -1,13 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Schools.aspx.cs" Inherits="IE5120.Schools" %>
 <!DOCTYPE html>
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     
     <!--Maina: Culkeeper title on the website start -->
     <title>Culkeeper</title>
     <!--Maina: Culkeeper title on the website ends-->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords" content="Fundaaz Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/stylecss.css" rel="stylesheet" type="text/css" />
@@ -17,6 +20,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Maina: bootstrap ends -->
+    
+    <link rel="icon" href="images/cul_icon.ico" type="images/x-icon" />
 
     <!-- Maina: style sheet starts -->
     <link rel="stylesheet" href="css/main.css" />
@@ -46,11 +51,11 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Select Culture <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton2_Click"><span class="icon-flag"><img src="images/portfolio/chn.png"/></span>China</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton1_Click"><span class="icon-flag"><img src="images/portfolio/chn.png"/></span>China</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
                                         <li><asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton3_Click"><span class="icon-flag"><img src="images/portfolio/india.png"/></span>India</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton1_Click"><span class="icon-flag"><img src="images/portfolio/italy.png"/></span>Italy</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton2_Click"><span class="icon-flag"><img src="images/portfolio/italy.png"/></span>Italy</asp:LinkButton></li>
                                     </ul>
                                </li>
                                <li class=" dropdown">
@@ -77,13 +82,14 @@
             </div>
          </div>
         <!--Maina: caption part of the page ends -->  
+
          <div class="container">
                 <div class="wrap">
             
                 <!--<div style="margin:14px 25px 10px 18px">
                     <img src="<%=imgurl %>" width="980px"  />
                 </div>-->        
-                 <div class="wrap">
+               
                      <div class="content">
                                
                                <br />
@@ -171,7 +177,7 @@
                                     <ItemTemplate>
                                         <div class="grid">        	
                                         <ul class="details">                   
-                                            <li><a href="Details.aspx?schoolcode=<%#Eval("schoolcode") %>" target="_blank"><%#Eval("schoolname") %></a></li>
+                                            <li><a href="Details.aspx?schoolcode=<%#Eval("schoolcode") %>" ><%#Eval("schoolname") %></a></li>
                                             <li>Index of Community Socio-Educational Advantage Value:&nbsp<%#Eval("ICSEAVALUE") %></li>
                                             <li>Language:&nbsp<%#Eval("language") %></li>
                                             <li>Suburb:&nbsp<%#Eval("surburb") %></li>
@@ -198,14 +204,14 @@
                    </div>
               </div>
          </div>
-     </div>
+  
   </form>
     
     <!--Maina: footer starts -->
         <div class="copy">
                 Copyright &copy; 2018 IT MANIACS.
         </div>   
-       <!--Maina: footer ends -->
+     <!--Maina: footer ends -->
 
 </body>
 </html>

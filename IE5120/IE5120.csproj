@@ -152,6 +152,7 @@
     <Content Include="error.html" />
     <Content Include="err\images\404.png" />
     <Content Include="images\chncul.png" />
+    <Content Include="images\cul_icon.ico" />
     <Content Include="images\indcul.png" />
     <Content Include="images\itacul.png" />
     <Content Include="images\logocul.png" />

@@ -3,214 +3,275 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title><%=name %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<style>
-    /* Always set the map height explicitly to define the size of the div
-      * element that contains the map. */
-    #map {
-        height: 230px;
-        width: 420px;
+    
+    <!--Maina: Culkeeper title on the website start -->
+    <title>Culkeeper</title>
+    <!--Maina: Culkeeper title on the website ends--> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+          * element that contains the map. */
+        #map {
+            height: 230px;
+            width: 420px;
+        }
+        #chartdiv1 {
+      width: 100%;
+      height: 295px;
     }
-    #chartdiv1 {
-  width: 100%;
-  height: 295px;
-}
-</style>
-<!-- Bootstrap Core CSS -->
-<link href="dv/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    </style>
+    <!-- Bootstrap Core CSS -->
+    <link href="dv/css/bootstrap.css" rel='stylesheet' type='text/css' />
 
-<!-- Custom CSS -->
-<link href="dv/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="dv/css/style.css" rel='stylesheet' type='text/css' />
 
-<!-- font-awesome icons CSS -->
-<link href="dv/css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome icons CSS-->
+    <!-- font-awesome icons CSS -->
+    <link href="dv/css/font-awesome.css" rel="stylesheet"> 
+    <!-- //font-awesome icons CSS-->
 
-<!-- side nav css file -->
-<link href='dv/css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css'/>
-<!-- //side nav css file -->
+    <!-- side nav css file -->
+    <link href='dv/css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css'/>
+    <!-- //side nav css file -->
  
- <!-- js-->
-<script src="dv/js/jquery-1.11.1.min.js"></script>
-<script src="dv/js/modernizr.custom.js"></script>
+     <!-- js-->
+    <script src="dv/js/jquery-1.11.1.min.js"></script>
+    <script src="dv/js/modernizr.custom.js"></script>
 
-<!--webfonts-->
-<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
-<!--//webfonts--> 
+    <!--webfonts-->
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet"/>
+    <!--//webfonts--> 
 
-<!-- chart -->
-<script src="dv/js/Chart.js"></script>
-<!-- //chart -->
+    <!-- chart -->
+    <script src="dv/js/Chart.js"></script>
+    <!-- //chart -->
 
-<!-- Metis Menu -->
-<script src="dv/js/metisMenu.min.js"></script>
-<script src="dv/js/custom.js"></script>
-<link href="dv/css/custom.css" rel="stylesheet">
-<!--//Metis Menu -->
-<style>
-    #chartdiv {
-        width: 100%;
-        height: 295px;
-    }
-</style>
-<!--pie-chart --><!-- index page sales reviews visitors pie chart -->
-<script src="dv/js/pie-chart.js" type="text/javascript"></script>
- <script type="text/javascript">
+    <!-- Metis Menu -->
+    <script src="dv/js/metisMenu.min.js"></script>
+    <script src="dv/js/custom.js"></script>
+    <link href="dv/css/custom.css" rel="stylesheet"/>
+    <!--//Metis Menu -->
+    <style>
+        #chartdiv {
+            width: 100%;
+            height: 295px;
+        }
+    </style>
 
-     $(document).ready(function () {
-         $('#demo-pie-0').pieChart({
-             barColor: '#00ffff',
-             trackColor: '#eee',
-             lineCap: 'round',
-             lineWidth: 8,
-             onStep: function (from, to, percent) {
-                 $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-             }
-         });
+    <!-- Maina: bootstrap starts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Maina: bootstrap ends -->
+    
+    <link rel="icon" href="images/cul_icon.ico" type="images/x-icon" />
+    
+    <!-- Maina: style sheet starts -->
+        <link rel="stylesheet" href="css/main.css" />
+    <!-- Maina: style sheet ends -->
 
-         $('#demo-pie-1').pieChart({
-             barColor: '#2dde98',
-             trackColor: '#eee',
-             lineCap: 'round',
-             lineWidth: 8,
-             onStep: function (from, to, percent) {
-                 $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-             }
-         });
 
-         $('#demo-pie-2').pieChart({
-             barColor: '#8e43e7',
-             trackColor: '#eee',
-             lineCap: 'butt',
-             lineWidth: 8,
-             onStep: function (from, to, percent) {
-                 $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-             }
-         });
+    <!--pie-chart --><!-- index page sales reviews visitors pie chart -->
+    <script src="dv/js/pie-chart.js" type="text/javascript"></script>
+     <script type="text/javascript">
 
-         $('#demo-pie-3').pieChart({
-             barColor: '#ffc168',
-             trackColor: '#eee',
-             lineCap: 'square',
-             lineWidth: 8,
-             onStep: function (from, to, percent) {
-                 $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-             }
-         });
+         $(document).ready(function () {
+             $('#demo-pie-0').pieChart({
+                 barColor: '#00ffff',
+                 trackColor: '#eee',
+                 lineCap: 'round',
+                 lineWidth: 8,
+                 onStep: function (from, to, percent) {
+                     $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                 }
+             });
+
+             $('#demo-pie-1').pieChart({
+                 barColor: '#2dde98',
+                 trackColor: '#eee',
+                 lineCap: 'round',
+                 lineWidth: 8,
+                 onStep: function (from, to, percent) {
+                     $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                 }
+             });
+
+             $('#demo-pie-2').pieChart({
+                 barColor: '#8e43e7',
+                 trackColor: '#eee',
+                 lineCap: 'butt',
+                 lineWidth: 8,
+                 onStep: function (from, to, percent) {
+                     $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                 }
+             });
+
+             $('#demo-pie-3').pieChart({
+                 barColor: '#ffc168',
+                 trackColor: '#eee',
+                 lineCap: 'square',
+                 lineWidth: 8,
+                 onStep: function (from, to, percent) {
+                     $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                 }
+             });
 
            
-     });
+         });
 
-    </script>
-<!-- //pie-chart --><!-- index page sales reviews visitors pie chart -->
+        </script>
+    <!-- //pie-chart --><!-- index page sales reviews visitors pie chart -->
 
-	<!-- requried-jsfiles-for owl -->
-					<link href="dv/css/owl.carousel.css" rel="stylesheet">
-					<script src="dv/js/owl.carousel.js"></script>
-						<script>
-						    $(document).ready(function() {
-						        $("#owl-demo").owlCarousel({
-						            items : 3,
-						            lazyLoad : true,
-						            autoPlay : true,
-						            pagination : true,
-						            nav:true,
+	    <!-- requried-jsfiles-for owl -->
+					    <link href="dv/css/owl.carousel.css" rel="stylesheet"/>
+					    <script src="dv/js/owl.carousel.js"></script>
+						    <script>
+						        $(document).ready(function() {
+						            $("#owl-demo").owlCarousel({
+						                items : 3,
+						                lazyLoad : true,
+						                autoPlay : true,
+						                pagination : true,
+						                nav:true,
+						            });
 						        });
-						    });
-						</script>
-					<!-- //requried-jsfiles-for owl -->
+						    </script>
+					    <!-- //requried-jsfiles-for owl -->
 
 </head>
+
 <body class="cbp-spmenu-push">
     <form id="form1" runat="server">
-    <div class="main-content">
-        <a href="Homepage.aspx"><img src="./images/logocul.png" height="60px" style="margin-left:240px;margin-top:10px" /></a>
-		<!--left-fixed -navigation-->		
-		<!-- main content start-->
-		<div id="page-wrapper" style="background-color:#ffffff">
-            <h1><%=name %></h1>
-            <h3>Phone: <%=phone %></h3>
-            <h3>Address: <%=address %></h3>
-            <a href="#" onclick="window.open('Map.aspx?lat=<%=lat %>&lng=<%=lng %>','popUpWindow','height=400,width=400,left=300,top=200,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">show on map</a>            
-           
-			<div class="main-page" style="background-color:#ffffff;margin-top:20px">            
-			<div class="col_3">
-        	<div class="col-md-3 widget widget1">
-        		<div class="r3_counter_box">
-                    <i class="pull-left fa fa-dollar icon-rounded"></i>
-                    <div class="stats">
-                      <h5><strong><%=icsea %></strong></h5>
-                      <span>ICSEA</span>
+         <div class="main-content">
+
+           <!-- Maina: Nav bar starts here -->
+           <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <b><a class="navbar-brand" href="/index.html"><img src="indexcss/images/ICON.png" style="width:30px; display:inline"/>CULKEEPER</a></b>
+                </div>
+                <div class="navbar-right">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Select Culture <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><span class="icon-flag"><img src="images/portfolio/chn.png" /></span>China</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#"><span class="icon-flag"><img src="images/portfolio/india.png" /></span>India</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#"><span class="icon-flag"><img src="images/portfolio/italy.png" /></span>Italy</a></li>
+                                    </ul>
+                               </li>
+                               <li class=" dropdown">
+                                    <a href="#"><span class="glyphicon glyphicon-globe"></span> Change Language</a>
+                              </li>
+                        </ul>
                     </div>
                 </div>
-        	</div>
-        	<div class="col-md-3 widget widget1">
-        		<div class="r3_counter_box">
-                    <i class="pull-left fa fa-laptop user1 icon-rounded"></i>
-                    <div class="stats">
-                      <h5><strong><%=t_stuff %></strong></h5>
-                      <span>Teaching staff</span>
-                    </div>
+
+            </div>
+        </nav>
+       <!--Maina: Nav bar ends here -->
+
+        <!--Maina: caption part of the page starts -->  
+         <div class="home-page-background">
+            <div class="homepage-caption">
+                <div class="container">
+                    <h2 style="color:white"><%=name %></h2>
+                    <br />
+                    <hr />
+                    <h4 style="color:white">Phone: <%=phone %></h4>
+                    <h4 style="color:white">Address: <%=address %></h4>            
+                    <br />
+                    <a class="btn btn-default" href="#">Back to List</a>
+                    <br />
+                    <br />
                 </div>
-        	</div>
-        	<%--<div class="col-md-3 widget widget1">
-        		<div class="r3_counter_box">
-                    <i class="pull-left fa fa-money user2 icon-rounded"></i>
-                    <div class="stats">
-                      <h5><strong><%=nt_stuff %></strong></h5>
-                      <span>Non teaching staff</span>
-                    </div>
-                </div>
-        	</div>--%>
-        	<div class="col-md-3 widget widget1">
-        		<div class="r3_counter_box">
-                    <i class="pull-left fa fa-pie-chart dollar1 icon-rounded"></i>
-                    <div class="stats">
-                      <h5><strong><%=total %></strong></h5>
-                      <span>Total student</span>
-                    </div>
-                </div>
-        	 </div>
-        	<div class="clearfix"> </div>
-		</div>
-		
-		<div class="row-one widgettable">
-             <div class="col-md-7 content-top-2 card" style="width:40%;height:320px">
-				<div class="agileinfo-cdr">
-					<div class="card-header">
-                        <h3>Non-English Background Percentange</h3>
-                    </div>
-					
-						<div id="Linegraph" style="width: 98%; height: 270px">
-						</div>
-						
-				</div>
-			</div>
-            <div class="col-md-4 charts-grids widget" style="width:40%;margin-left:20px">
-						<div class="card-header">
-							<h3><%=name %></h3>
-						</div>
-						
-						<div id="container" style="width: 100%; height:270px;">
-							<canvas id="canvas"></canvas>
-						</div>
-						
-			</div>
-           
-            
+            </div>
+       </div>
+        <!--Maina: caption part of the page ends -->
 	
-			
-
-
-			<div class="clearfix"> </div>
-		</div>
-                
+		<!--Maina: main content start-->
+		<div class="container" style="background-color:#ffffff">    
+			<div class="main">
+               <div class="r3_counter_box" >
+                      <div class="stats">
+                           <br />
+                           <i class="pull-left fa fa-dollar icon-rounded glyphicon glyphicon-education"></i>      
+                           <br />
+                           <h5 style="color:black">Index of Community Socio-Educational Advantage Value: <%=icsea %></h5>
+                           <br />
+                           <p>The Index of Community Socio-Educational Advantage (ICSEA) is a scale that represents levels of educational advantage. A value on the scale assigned to a school is the averaged level for all students in the particular school. </p>  
+                           <hr />
+                           <i class="pull-left fa fa-laptop user1 icon-rounded glyphicon glyphicon-user "></i>
+                           <br />
+                           <h5 style="color:black">Total number of teaching staff in School: <%=t_stuff %></h5>
+                           <br />
+                           <p>The number of staff is according to 2017-2017 year.</p>  
+                           <hr />
+                           <i class="pull-left fa fa-pie-chart dollar1 icon-rounded"></i>      
+                           <br />
+                           <h5 style="color:black">Number of students in the school: <%=total %></h5>
+                           <br />
+                           <p>The number of staff is according to 2017-2018 year.</p>  
+                           <hr />
+                           <i class="pull-left fa fa-pie-chart dollar2 icon-rounded glyphicon glyphicon-align-left "></i>      
+                           <br />
+                           <h5 style="color:black">Non-English Background Percentange: </h5>
+                           
+                           <div style="width:100%;height:350px; position:center">
+				                <div class="container">
+				                    <div id="Linegraph" style="width: 98%; height: 270px"></div>	
+				                </div>
+			               </div>
+                           <hr />
+                           <i class="pull-left fa fa-pie-chart dollar3 icon-rounded glyphicon glyphicon-equalizer"></i>      
+                           <br />
+                           <h5 style="color:black">Students in each school year: </h5>
+                           <br />
+                           <div style="width:85%;height:350px; position:center">
+						        <div class="agileinfo-cdr">
+						            <div style="width: 98%; height: 270px">
+								            <canvas id="canvas"></canvas>
+						            </div>
+			                    </div>                      
+                           </div>
+                           <br />
+                           <br />
+                           <br/>
+                           <br/>
+                           <br />
+                           <br />
+                           <hr/>
+                           <br/>
+                          <!--Maina: Map starts -->
+                            <div style="width:100%;height:350px; position:center">
+				                <div class="container">
+				                    <div id="map" style=" width:100%; height:270px"></div>
+				                </div>
+			               </div>
+                            <!--Maina: Map ends -->
+                      </div>
+                </div>
+           </div>
+     </div>
+            
+               
 	<!-- for amcharts js -->
 			<script src="dv/js/amcharts.js"></script>
 			<script src="dv/js/serial.js"></script>
@@ -220,11 +281,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- for amcharts js -->
 
     <script  src="dv/js/index1.js"></script>
-			</div>
-		</div>
-        
-	</div>
-        
 		
 	<!-- new added graphs chart js-->
 	
@@ -517,7 +573,8 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- Bootstrap Core JavaScript -->
    <script src="dv/js/bootstrap.js"> </script>
 	<!-- //Bootstrap Core JavaScript -->
-    <script>
+    
+        <script>
         var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -529,9 +586,21 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 map: map
             });
         }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKlKmzz6EFwx1wD-4DHTFydRELwHNp2kA&callback=initMap"
-        async defer></script>
-    </form>
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKlKmzz6EFwx1wD-4DHTFydRELwHNp2kA&callback=initMap"
+            async defer>
+
+    </script>
+ 
+    
+    <!--Maina: footer starts -->
+        <br />
+        <div class="copy">
+             Copyright &copy; 2018 IT MANIACS.
+        </div>   
+     <!--Maina: footer ends -->
+    </div>
+  </form>
 </body>
+
 </html>

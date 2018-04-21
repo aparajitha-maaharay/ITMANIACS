@@ -2298,6 +2298,8 @@ h4.modal-title {
 }
 .stats {
   overflow: hidden;
+  outline:solid;
+  border-color:lightgray;
 }
 .r3_counter_box .fa {
   margin-right: 0px;
@@ -2317,7 +2319,7 @@ h4.modal-title {
 	font-size:16px;
 }
 .fa.pull-left {
-  margin-right: 5% !important;
+  margin-right: 2% !important;
 }
 .icon-rounded{
   background-color:#7460ee;

@@ -3,11 +3,13 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <!--Maina: Culkeeper title on the website start -->
     <title>Culkeeper</title>
     <!--Maina: Culkeeper title on the website ends-->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -23,7 +25,7 @@
     <link rel="stylesheet" href="assets/animate/animate.css" />
     <link rel="stylesheet" href="assets/animate/set.css" />
     <!-- favicon -->
-    <link rel="icon" href="images/favicon.ico" type="images/x-icon" />
+    <link rel="icon" href="images/cul_icon.ico" type="images/x-icon" />
     
     <!-- Maina: style sheet starts -->
     <link rel="stylesheet" href="css/main.css" />
@@ -53,11 +55,11 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Select Culture <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton2_Click"><span class="icon-flag"><img src="images/portfolio/chn.png"/></span>China</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton2_Click"><span class="icon-flag"><img src="images/portfolio/chn.png"/></span>China</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
                                         <li><asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton3_Click"><span class="icon-flag"><img src="images/portfolio/india.png"/></span>India</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton1_Click"><span class="icon-flag"><img src="images/portfolio/italy.png"/></span>Italy</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton1_Click"><span class="icon-flag"><img src="images/portfolio/italy.png"/></span>Italy</asp:LinkButton></li>
                                     </ul>
                                </li>
                                <li class=" dropdown">
@@ -75,7 +77,7 @@
       <div class="home-page-background">
         <div class="homepage-caption">
             <div class="container">
-                <h2 style="color:white"><b>Select the culture you are interested to explore.</b></h2>
+                <h2 style="color:white"><b>Select the culture you are interested to explore</b></h2>
                 <br />
                 <hr />
                 <br />
@@ -84,7 +86,7 @@
                         <img src="images/portfolio/chn.png" alt="img01"/>
                         <figcaption>
                             <h2 style="color:white">CHINA</h2>
-                            <p>View more about Chinese culture in Victoria</p><br/>   
+                            <p style="color:powderblue; font-family:Arial">Click here to view more</p><br/>   
                             <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">View More</asp:LinkButton>
                         </figcaption>
                     </figure>
@@ -92,8 +94,8 @@
                     <figure class="effect-oscar  wowload fadeInUp">
                     <img src="images/portfolio/italy.png" alt="img01"/>
                     <figcaption>
-                        <h2 style="color:#0000FF">ITALY</h2>
-                        <p>View more about Italian culture in Victoria</p><br/>           
+                        <h2 style="color:#A9A9A9">ITALY</h2>
+                        <p style="color:powderblue; font-family:Arial">Click here to view more</p><br/>           
                         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">View More</asp:LinkButton>
                     </figcaption>
                  
@@ -101,8 +103,8 @@
                         <figure class="effect-oscar  wowload fadeInUp" >
                         <img src="images/portfolio/india2.png" alt="img01"/>
                         <figcaption>
-                            <h2 style="color:#0000FF">INDIA</h2>
-                            <p>View more about Indian culture in Victoria</p><br/>
+                            <h2 style="color:#A9A9A9">INDIA</h2>
+                            <p style="color:powderblue; font-family:Arial">Click here to view more</p><br/>
                             <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">View More</asp:LinkButton>
                         </figcaption>
                     </figure>     
