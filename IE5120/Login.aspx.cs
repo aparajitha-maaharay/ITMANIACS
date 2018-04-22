@@ -16,13 +16,11 @@ namespace IE5120
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string uname = TextBox1.Text;
+            string name = TextBox1.Text;
             string pwd = TextBox2.Text;
-            Session["uname"] = uname;
-            Session["pwd"] = pwd;
-            if (uname.Equals("ITMANIACS")&&pwd.Equals("ITMANIACS"))
-            {                
-                Response.Redirect("Homepage.aspx");
+            if (name.Equals("ITMANIACS")&&pwd.Equals("ITMANIACS"))
+            {
+                Response.Redirect("index.aspx");
             }
             else
             {

@@ -8,11 +8,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        Username:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
-        Password:<asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox><br />
-        <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
-    </div>
+        ENTER LOGIN DETAILS<br />
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox><br />
+        <asp:Button ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" />
+
     </form>
 </body>
 </html>

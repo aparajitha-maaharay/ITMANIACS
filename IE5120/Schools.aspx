@@ -1,13 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Schools.aspx.cs" Inherits="IE5120.Schools" %>
 <!DOCTYPE html>
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     
     <!--Maina: Culkeeper title on the website start -->
     <title>Culkeeper</title>
     <!--Maina: Culkeeper title on the website ends-->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords" content="Fundaaz Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/stylecss.css" rel="stylesheet" type="text/css" />
@@ -17,6 +20,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Maina: bootstrap ends -->
+    
+    <link rel="icon" href="images/cul_icon.ico" type="images/x-icon" />
 
     <!-- Maina: style sheet starts -->
     <link rel="stylesheet" href="css/main.css" />
@@ -37,25 +42,35 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <b><a class="navbar-brand" href="/index.html"><img src="indexcss/images/ICON.png" style="width:30px; display:inline"/>CULKEEPER</a></b>
+                    <b><a class="navbar-brand" href="/index.aspx"><img src="indexcss/images/ICON.png" style="width:30px; display:inline"/>CULKEEPER</a></b>
                 </div>
                 <div class="navbar-right">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                                <li><a href="index.aspx"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Select Culture <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton2_Click"><span class="icon-flag"><img src="images/portfolio/chn.png"/></span>China</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton1_Click"><span class="icon-flag"><img src="images/portfolio/chn.png"/></span>China</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
                                         <li><asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton3_Click"><span class="icon-flag"><img src="images/portfolio/india.png"/></span>India</asp:LinkButton></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton1_Click"><span class="icon-flag"><img src="images/portfolio/italy.png"/></span>Italy</asp:LinkButton></li>
+                                        <li><asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton2_Click"><span class="icon-flag"><img src="images/portfolio/italy.png"/></span>Italy</asp:LinkButton></li>
                                     </ul>
                                </li>
-                               <li class=" dropdown">
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-globe"></span> Change Language <span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="google_translate_element">
+                                <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'hi,it,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            </ul>
+                        </li>
+                               <%--<li class=" dropdown">
                                     <a href="#"><span class="glyphicon glyphicon-globe"></span> Change Language</a>
-                              </li>
+                              </li>--%>
                         </ul>
                     </div>
                 </div>
@@ -77,13 +92,14 @@
             </div>
          </div>
         <!--Maina: caption part of the page ends -->  
+
          <div class="container">
                 <div class="wrap">
             
                 <!--<div style="margin:14px 25px 10px 18px">
                     <img src="<%=imgurl %>" width="980px"  />
                 </div>-->        
-                 <div class="wrap">
+               
                      <div class="content">
                                
                                <br />
@@ -114,7 +130,13 @@
                                       </li>
                                       <li>
                                           <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Communities</asp:LinkButton>
-                                      </li>                
+                                      </li> 
+                                      <li>
+                                          <asp:LinkButton ID="LinkButton11" runat="server" OnClick="LinkButton11_Click">Demographic Distribution</asp:LinkButton>
+                                      </li>
+                                      <li>
+                                          <asp:LinkButton ID="LinkButton12" runat="server" OnClick="LinkButton12_Click">Library</asp:LinkButton>
+                                      </li>               
                                  </ul>
                                </div>
                              </div> 
@@ -124,12 +146,12 @@
                             <div class="main"> 
                                 <br />
                                 <div >
-                                   <a href="Homepage.aspx">Culture</a> > <% Response.Write(Session["culture"].ToString()); %> <h3 style="color:#387ABC; text-align:center"><b>WELCOME TO <% Response.Write(Session["culture"].ToString().ToUpper()); %> CULTURE</b></h3>
+                                   <a href="Homepage.aspx">Culture</a> > <%=culde %> <h3 style="color:#387ABC; text-align:center"><b>WELCOME TO <%=culde.ToUpper() %> CULTURE</b></h3>
                                    <hr />
                                      
                                     <div class="grid">
                                       <ul class="details">
-                                         <li style="text-align:center"><b>LIST OF PRIMARY SCHOOLS</b></li>
+                                         <li style="text-align:center"><b>GOVERNMENT PRIMARY SCHOOLS IN VICTORIA</b></li>
                                       </ul>
                                    </div>
                                 
@@ -139,7 +161,7 @@
                                 <br />
                    
                                 <div class="search">
-                                    <asp:TextBox ID="TextBox1" runat="server" placeholder="Search by school name or suburb."></asp:TextBox>
+                                    <asp:TextBox ID="TextBox1" runat="server" placeholder="Search by school name or suburb and press enter"></asp:TextBox>
                                     <asp:Button ID="Button1"  runat="server" OnClick="Button1_Click"/> 
                                 </div>
                         
@@ -148,8 +170,8 @@
                                 </div>--%>
                        
                                 <div class="paginate">
-                                    <a href="Schools.aspx"><span class="glyphicon glyphicon-th-list"> View All </span></a>
-                                    <a href="SchoolsMap.aspx"><span class="glyphicon glyphicon-map-marker"> Map View </span></a>
+                                    <a href="Schools.aspx"><%--<span class="glyphicon glyphicon-th-list">--%> View All <%--</span>--%></a>
+                                    <a href="SchoolsMap.aspx"><%--<span class="glyphicon glyphicon-map-marker">--%> Map View <%--</span>--%></a>
                                 </div>
                     
                                 <hr />   
@@ -158,9 +180,7 @@
                                     <ul class="details">
                                         <li>No result</li>                
                                     </ul>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                    <div class="paginate">
-                                        <asp:LinkButton ID="LinkButton4" runat="server" OnClick="Button2_Click">Go back and view all</asp:LinkButton>
-                                    </div>
+                                   
                                     <%--<asp:Button ID="Button2" runat="server" Text="go back and view all" OnClick="Button2_Click" />--%>
                                 </div>
 
@@ -171,7 +191,7 @@
                                     <ItemTemplate>
                                         <div class="grid">        	
                                         <ul class="details">                   
-                                            <li><a href="Details.aspx?schoolcode=<%#Eval("schoolcode") %>" target="_blank"><%#Eval("schoolname") %></a></li>
+                                            <li><a href="Details.aspx?schoolcode=<%#Eval("schoolcode") %>"  style="color:cornflowerblue" ><%#Eval("schoolname") %></a></li>
                                             <li>Index of Community Socio-Educational Advantage Value:&nbsp<%#Eval("ICSEAVALUE") %></li>
                                             <li>Language:&nbsp<%#Eval("language") %></li>
                                             <li>Suburb:&nbsp<%#Eval("surburb") %></li>
@@ -198,14 +218,14 @@
                    </div>
               </div>
          </div>
-     </div>
+  
   </form>
     
     <!--Maina: footer starts -->
         <div class="copy">
                 Copyright &copy; 2018 IT MANIACS.
         </div>   
-       <!--Maina: footer ends -->
+     <!--Maina: footer ends -->
 
 </body>
 </html>

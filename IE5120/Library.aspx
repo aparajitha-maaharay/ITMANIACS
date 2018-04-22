@@ -1,10 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SchoolsMap.aspx.cs" Inherits="IE5120.SchoolsMap" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Library.aspx.cs" Inherits="IE5120.Library" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    
+    <!--Maina: Culkeeper title on the website start -->
     <title>Culkeeper</title>
+    <!--Maina: Culkeeper title on the website ends-->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords" content="Fundaaz Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,19 +23,10 @@
     <link rel="stylesheet" href="css/main.css" />
     <!-- Maina: style sheet ends -->
 
-     <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-        <script language="javascript" type="text/javascript">
-            function initViz() {
-                var containerDiv = document.getElementById("vizContainer"),
-                        url = "<%=tableau_url%>";
-
-                var viz = new tableau.Viz(containerDiv, url);
-            }
-        </script>
-</head>
-<body onload="initViz();">
+</head>    
+<body>
     <form id="form1" runat="server">
-        <!-- Maina: Nav bar starts here -->
+    <!-- Maina: Nav bar starts here -->
            <nav class="navbar navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
@@ -81,7 +75,7 @@ function googleTranslateElementInit() {
        <!--Maina: Nav bar ends here -->
        
        <!--Maina: caption part of the page starts -->  
-          <div class="home-page-background" style="height:350px;">
+         <div class="home-page-background" style="height:350px;">
              <div class="homepage-caption">
                 <div class="container">
                     <h2 style="color:white"><b>EXPLORE MORE ABOUT CHINESE, ITALIAN & INDIAN CULTURE IN VICTORIA</b></h2>
@@ -107,17 +101,17 @@ function googleTranslateElementInit() {
                                   <h3><span class="glyphicon glyphicon-tags"> CATEGORY </span></h3>
                                   <ul>
                                       <li>
-                                          <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Schools</asp:LinkButton>
+                                          <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Schools</asp:LinkButton>
                                       </li>
                                       <li>
-                                          <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Communities</asp:LinkButton>
-                                      </li> 
+                                          <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Communities</asp:LinkButton>
+                                      </li>     
                                       <li>
-                                          <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Demographic Distribution</asp:LinkButton>
-                                      </li> 
+                                          <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Demographic Distribution</asp:LinkButton>
+                                      </li>  
                                       <li>
-                                          <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Library</asp:LinkButton>
-                                      </li>              
+                                          <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Library</asp:LinkButton>
+                                      </li>         
                                  </ul>
                                </div>
                              </div> 
@@ -127,41 +121,89 @@ function googleTranslateElementInit() {
                             <div class="main"> 
                                 <br />
                                 <div >
-                                   <a href="Homepage.aspx">Culture</a> > <%=culType %> <h3 style="color:#387ABC; text-align:center"><b>GOVERNMENT PRIMARY SCHOOLS IN VICTORIA</b></h3>
-                                 <%--  <hr />--%>
+                                   <a href="Homepage.aspx">Culture</a> > <%=culType%> <h3 style="color:#387ABC; text-align:center"><b>LIBRARIES IN VICTORIA</b></h3>
+                                   <hr />
                                      
                                     <%--<div class="grid">
                                       <ul class="details">
-                                         <li style="text-align:center"><b>LIST OF PRIMARY SCHOOLS</b></li>
+                                         <li style="text-align:center"><b>LIST OF LIBRARY</b></li>
                                       </ul>
                                    </div>--%>
                                 
-                                </div>                                                  
-                       
-                                <div class="paginate" style="margin-right:20px;">
-                                    <a href="Schools.aspx"><span class="glyphicon glyphicon-th-list"> List View </span></a>                                    
                                 </div>
-                                <div id="vizContainer" style="height: 100%;width:100%"></div>
-                                
-                                <%--<hr />--%>                                                                                                                                                 
-                                <div class="clear"></div>                                
+                   
+                                <div class="search">
+                                    <asp:TextBox ID="TextBox1" runat="server" placeholder="Search by library name or suburb and press enter"></asp:TextBox>
+                                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click"/> 
+                                </div>
+                       
+                                <div class="paginate">
+                                    <a href="Library.aspx"><%--<span class="glyphicon glyphicon-th-list">--%> View All <%--</span>--%></a>
+                                    <a href="LibraryMap.aspx"><%--<span class="glyphicon glyphicon-map-marker">--%> Map View <%--</span>--%></a>
+                                </div>
+                    
+                                <hr />   
+                           
+                                <%--<div class="grid" id="eptid" runat ="server" style="display:none">
+                                    <ul class="details">
+                                        <li>No result</li>                
+                                    </ul>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                                      
+                                </div>--%>
+
+                                <asp:ListView ID="ListView1" runat="server" ItemPlaceholderID="idddd" OnPagePropertiesChanging="PagePropertiesChanging">
+                                    <LayoutTemplate>                                
+                                        <asp:PlaceHolder ID="idddd" runat="server"></asp:PlaceHolder>          
+                                    </LayoutTemplate>
+                                    <ItemTemplate>
+                                        <div class="grid">        	
+                                        <ul class="details">                   
+                                            <li style="color:cornflowerblue;font-size:16px"><%#Eval("name") %></li>
+                                            <li>Address:&nbsp<%#Eval("address") %></li>
+                                            <li>Phone:&nbsp<%#Eval("phone") %></li>
+                                            <li>Open days:&nbsp<%#Eval("daystart") %>&nbsp-&nbsp<%#Eval("dayend") %></li>
+                                            <li><a href="<%#Eval("URL") %>>" target="_blank" style="color:#0000FF;text-decoration:underline;">Click here to find out books, DVDs, Kits available related to your culture!</a></li>
+                                        </ul>
+                        
+                                        <div class="clear"></div>
+                                        </div>
+                                    </ItemTemplate>
+                                    <EmptyDataTemplate>
+                                         <div class="grid" runat ="server">
+                                    <ul class="details">
+                                        <li>No result</li>                
+                                    </ul>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp                                                                     
+                                    </div>
+                                    </EmptyDataTemplate>
+                                </asp:ListView>        
+                            
+                        
+                                <div class="clear"></div>
+                                <div class="paginate">
+                                    <asp:DataPager ID="DataPager1" runat="server" PagedControlID="ListView1" PageSize="8" OnPreRender="ListPage_PreRender">
+                                        <Fields>
+                                              <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="False" ShowNextPageButton="False" ShowPreviousPageButton="False" FirstPageText="1" PreviousPageText="<<Prev" />
+                                              <asp:NumericPagerField ButtonType="Link" />
+                                              <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="False" ShowNextPageButton="False" ShowPreviousPageButton="False" NextPageText="Next>>" LastPageText="Last" />    
+                                        </Fields>
+                                   </asp:DataPager>
+
                                </div>
                          </div>
                    </div>
               </div>
          </div>
+     </div>
         <div class="copy">
                 Copyright &copy; 2018 IT MANIACS.
-        </div> 
-       <%--this is tableau map div->--%>
-        
-        <!--Maina: caption part of the page ends -->  
-         
+        </div>
   </form>
     
     <!--Maina: footer starts -->
-          
-    
-       <!--Maina: footer ends -->        
+        <%--<div class="copy">
+                Copyright &copy; 2018 IT MANIACS.
+        </div> --%>  
+       <!--Maina: footer ends -->
 </body>
 </html>
+

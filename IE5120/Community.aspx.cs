@@ -7,27 +7,30 @@ using System.Web.UI.WebControls;
 
 namespace IE5120
 {
-    public partial class SchoolsMap : System.Web.UI.Page
+    public partial class Community : System.Web.UI.Page
     {
+        // public string tableau_url = "";
+        //public string culType = 
         public string tableau_url = "";
         public string culType = "";
+        public string text = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             string cul = Session["culture"].ToString();
-            LinkButton1.Style.Add("background-color", "#EBEBEB");
+            LinkButton2.Style.Add("background-color", "#EBEBEB");
             if (cul.Equals("Chinese (Mandarin)"))
             {
-                tableau_url = "https://public.tableau.com/views/schoolmap/Sheet1?:embed=y&:display_count=yes&publish=yes";
+                tableau_url = "https://public.tableau.com/views/Mandarin_A_0/1_1?:embed=y&:display_count=yes&publish=yes";                
                 culType = "Chinese";
             }
             if (cul.Equals("Italian"))
             {
-                tableau_url = "https://public.tableau.com/views/schoolmapitaly/Sheet1?:embed=y&:display_count=yes&publish=yes";
+                tableau_url = "https://public.tableau.com/views/Italian_A_0/1_1?:embed=y&:display_count=yes&publish=yes";
                 culType = "Italian";
             }
             if (cul.Equals("Hindi"))
             {
-                tableau_url = "https://public.tableau.com/views/schoolmapindia/Sheet1?:embed=y&:display_count=yes&publish=yes";
+                tableau_url = "https://public.tableau.com/views/Hindi_A_0/1_1?:embed=y&:display_count=yes&publish=yes";
                 culType = "Indian";
             }
         }
@@ -56,13 +59,14 @@ namespace IE5120
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Community.aspx");
+            Response.Redirect("Communities.aspx");
         }
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
             Response.Redirect("Population.aspx");
         }
+
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
             Response.Redirect("Library.aspx");

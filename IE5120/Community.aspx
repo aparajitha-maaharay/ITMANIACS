@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SchoolsMap.aspx.cs" Inherits="IE5120.SchoolsMap" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Community.aspx.cs" Inherits="IE5120.Community" %>
 
 <!DOCTYPE html>
 
@@ -32,8 +32,7 @@
 </head>
 <body onload="initViz();">
     <form id="form1" runat="server">
-        <!-- Maina: Nav bar starts here -->
-           <nav class="navbar navbar-inverse">
+         <nav class="navbar navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -64,7 +63,7 @@
                                
                                   <script type="text/javascript">
 function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'hi,it,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi,it,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                             </ul>
@@ -114,10 +113,10 @@ function googleTranslateElementInit() {
                                       </li> 
                                       <li>
                                           <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Demographic Distribution</asp:LinkButton>
-                                      </li> 
+                                      </li>   
                                       <li>
                                           <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Library</asp:LinkButton>
-                                      </li>              
+                                      </li>             
                                  </ul>
                                </div>
                              </div> 
@@ -127,23 +126,17 @@ function googleTranslateElementInit() {
                             <div class="main"> 
                                 <br />
                                 <div >
-                                   <a href="Homepage.aspx">Culture</a> > <%=culType %> <h3 style="color:#387ABC; text-align:center"><b>GOVERNMENT PRIMARY SCHOOLS IN VICTORIA</b></h3>
-                                 <%--  <hr />--%>
+                                   <a href="Homepage.aspx">Culture</a> > <%=culType%> <h3 style="color:#387ABC; text-align:center"><b>WELCOME TO <%=culType.ToUpper() %> COMMUNITY</b></h3>
+                                    <hr />
                                      
-                                    <%--<div class="grid">
+                                    <div class="grid">
                                       <ul class="details">
-                                         <li style="text-align:center"><b>LIST OF PRIMARY SCHOOLS</b></li>
+                                         <li style="text-align:center"><b>Find Saturday schools and church/ temple for your location</b></li>
                                       </ul>
-                                   </div>--%>
-                                
-                                </div>                                                  
-                       
-                                <div class="paginate" style="margin-right:20px;">
-                                    <a href="Schools.aspx"><span class="glyphicon glyphicon-th-list"> List View </span></a>                                    
-                                </div>
-                                <div id="vizContainer" style="height: 100%;width:100%"></div>
-                                
-                                <%--<hr />--%>                                                                                                                                                 
+                                   </div>
+                                    <br />
+                                </div>  
+                                 <div id="vizContainer" style="height: 100%;width:100%;"></div>                                                                                                                                                                                                 
                                 <div class="clear"></div>                                
                                </div>
                          </div>
@@ -152,16 +145,8 @@ function googleTranslateElementInit() {
          </div>
         <div class="copy">
                 Copyright &copy; 2018 IT MANIACS.
-        </div> 
-       <%--this is tableau map div->--%>
-        
-        <!--Maina: caption part of the page ends -->  
-         
-  </form>
-    
-    <!--Maina: footer starts -->
-          
-    
-       <!--Maina: footer ends -->        
+        </div>         
+  </form>   
 </body>
 </html>
+

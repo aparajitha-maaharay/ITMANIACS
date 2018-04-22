@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SchoolsMap.aspx.cs" Inherits="IE5120.SchoolsMap" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LibraryMap.aspx.cs" Inherits="IE5120.LibraryMap" %>
 
 <!DOCTYPE html>
 
@@ -24,14 +24,14 @@
         <script language="javascript" type="text/javascript">
             function initViz() {
                 var containerDiv = document.getElementById("vizContainer"),
-                        url = "<%=tableau_url%>";
+                        url = "https://public.tableau.com/views/LIB_0/Dashboard1?:embed=y&:display_count=yes&publish=yes";
 
                 var viz = new tableau.Viz(containerDiv, url);
             }
         </script>
 </head>
 <body onload="initViz();">
-    <form id="form1" runat="server">
+     <form id="form1" runat="server">
         <!-- Maina: Nav bar starts here -->
            <nav class="navbar navbar-inverse">
             <div class="container">
@@ -127,7 +127,7 @@ function googleTranslateElementInit() {
                             <div class="main"> 
                                 <br />
                                 <div >
-                                   <a href="Homepage.aspx">Culture</a> > <%=culType %> <h3 style="color:#387ABC; text-align:center"><b>GOVERNMENT PRIMARY SCHOOLS IN VICTORIA</b></h3>
+                                   <a href="Homepage.aspx">Culture</a> > <%=culType %> <h3 style="color:#387ABC; text-align:center"><b>LIBRARIES IN VICTORIA</b></h3>
                                  <%--  <hr />--%>
                                      
                                     <%--<div class="grid">
@@ -139,7 +139,7 @@ function googleTranslateElementInit() {
                                 </div>                                                  
                        
                                 <div class="paginate" style="margin-right:20px;">
-                                    <a href="Schools.aspx"><span class="glyphicon glyphicon-th-list"> List View </span></a>                                    
+                                    <a href="Library.aspx"><span class="glyphicon glyphicon-th-list"> List View </span></a>                                    
                                 </div>
                                 <div id="vizContainer" style="height: 100%;width:100%"></div>
                                 
@@ -162,6 +162,6 @@ function googleTranslateElementInit() {
     <!--Maina: footer starts -->
           
     
-       <!--Maina: footer ends -->        
+       <!--Maina: footer ends -->  
 </body>
 </html>

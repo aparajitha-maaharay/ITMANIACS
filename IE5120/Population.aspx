@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SchoolsMap.aspx.cs" Inherits="IE5120.SchoolsMap" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Population.aspx.cs" Inherits="IE5120.Population" %>
 
 <!DOCTYPE html>
 
@@ -32,7 +32,7 @@
 </head>
 <body onload="initViz();">
     <form id="form1" runat="server">
-        <!-- Maina: Nav bar starts here -->
+    <!-- Maina: Nav bar starts here -->
            <nav class="navbar navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
@@ -114,10 +114,10 @@ function googleTranslateElementInit() {
                                       </li> 
                                       <li>
                                           <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Demographic Distribution</asp:LinkButton>
-                                      </li> 
+                                      </li>  
                                       <li>
                                           <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Library</asp:LinkButton>
-                                      </li>              
+                                      </li>             
                                  </ul>
                                </div>
                              </div> 
@@ -127,23 +127,9 @@ function googleTranslateElementInit() {
                             <div class="main"> 
                                 <br />
                                 <div >
-                                   <a href="Homepage.aspx">Culture</a> > <%=culType %> <h3 style="color:#387ABC; text-align:center"><b>GOVERNMENT PRIMARY SCHOOLS IN VICTORIA</b></h3>
-                                 <%--  <hr />--%>
-                                     
-                                    <%--<div class="grid">
-                                      <ul class="details">
-                                         <li style="text-align:center"><b>LIST OF PRIMARY SCHOOLS</b></li>
-                                      </ul>
-                                   </div>--%>
-                                
-                                </div>                                                  
-                       
-                                <div class="paginate" style="margin-right:20px;">
-                                    <a href="Schools.aspx"><span class="glyphicon glyphicon-th-list"> List View </span></a>                                    
-                                </div>
-                                <div id="vizContainer" style="height: 100%;width:100%"></div>
-                                
-                                <%--<hr />--%>                                                                                                                                                 
+                                   <a href="Homepage.aspx">Culture</a> > <%=culType %> <h3 style="color:#387ABC; text-align:center"><b> <%=culType.ToUpper() %> DEMOGRAPHIC DISTRIBUTION</b></h3>                                                          
+                                </div>   
+                                <div id="vizContainer" style="height: 100%;width:100%"></div>                                                                                                                                                                                                
                                 <div class="clear"></div>                                
                                </div>
                          </div>
@@ -156,12 +142,11 @@ function googleTranslateElementInit() {
        <%--this is tableau map div->--%>
         
         <!--Maina: caption part of the page ends -->  
-         
-  </form>
-    
+    </form>
     <!--Maina: footer starts -->
           
     
-       <!--Maina: footer ends -->        
+       <!--Maina: footer ends -->  
 </body>
 </html>
+

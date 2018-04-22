@@ -89,15 +89,7 @@ namespace IE5120
                 double tmp2016 = Convert.ToDouble(percent_2016) * 100;
                 per_2016 = Convert.ToInt16(tmp2016);
                 double tmp2017 = Convert.ToDouble(percent_2017) * 100;
-                per_2017 = Convert.ToInt16(tmp2017);
-                //string substr2014 = percent_2014.Substring(0, percent_2014.Length - 1);
-                //per_2014 = Convert.ToInt16(substr2014);
-                //string substr2015 = percent_2015.Substring(0,percent_2015.Length-1);
-                //per_2015 = Convert.ToInt16(substr2015);
-                //string substr2016 = percent_2016.Substring(0, percent_2016.Length - 1);
-                //per_2016 = Convert.ToInt16(substr2016);
-                //string substr2017 = percent_2017.Substring(0, percent_2017.Length - 1);
-                //per_2017 = Convert.ToInt16(substr2017);
+                per_2017 = Convert.ToInt16(tmp2017);               
                 string strlat = dr["latitude"].ToString();
                 string strlng = dr["longitude"].ToString();
                 lat = Convert.ToDouble(strlat);
@@ -105,6 +97,23 @@ namespace IE5120
             }
             dr.Close();
             con.Close();
+        }
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session["culture"] = "Chinese (Mandarin)";
+            Response.Redirect("Schools.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Session["culture"] = "Hindi";
+            Response.Redirect("Schools.aspx");
+        }
+
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Session["culture"] = "Italian";
+            Response.Redirect("Schools.aspx");
         }
     }
 }

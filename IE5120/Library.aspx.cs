@@ -9,39 +9,38 @@ using System.Data;
 
 namespace IE5120
 {
-    public partial class Schools : System.Web.UI.Page
+    public partial class Library : System.Web.UI.Page
     {
         public string imgurl = "";
         public string ept = "";
         string cul = "";
-        public string culde = "";
-
-        //public DataTable table = new DataTable();
-
-        //public int i = 0;
+        //string chncul = "";        //public string culType = "";
+        public string culType = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             Session.Timeout = 30;
             cul = Session["culture"].ToString();//receive session object of culture            
             if (cul.Equals("Chinese (Mandarin)"))
             {
+                cul = "Mandarin";
+                culType = "Chinese";
+                //chncul = "Mandarin";
                 imgurl = "images/chncul.png";//change images
-                culde = "Chinese";
-                LinkButton1.Style.Add("background-color", "#EBEBEB");
+                //LinkButton1.Style.Add("background-color", "#EBEBEB");
             }
             else if (cul.Equals("Italian"))
             {
+                culType = "Italian";
                 imgurl = "images/itacul.png";//change images
-                culde = "Italian";
-                LinkButton2.Style.Add("background-color", "#EBEBEB");
+                //LinkButton2.Style.Add("background-color", "#EBEBEB");
             }
             else
             {
+                culType = "Indian";
                 imgurl = "images/indcul.png";//change images
-                culde = "Indian";
-                LinkButton3.Style.Add("background-color", "#EBEBEB");
+                //LinkButton3.Style.Add("background-color", "#EBEBEB");
             }
-            LinkButton5.Style.Add("background-color", "#EBEBEB");
+            LinkButton1.Style.Add("background-color", "#EBEBEB");
             if (!Page.IsPostBack)
             {
                 //ViewState["retu"] = Request.UrlReferrer.ToString();
@@ -49,7 +48,7 @@ namespace IE5120
                 //mysql connection details
                 MySqlConnection con = new MySqlConnection(conn);
                 con.Open();
-                string sql = "select * from schools where language='" + cul + "' order by ICSEAVALUE";
+                string sql = "select * from library where culture='" + cul + "'";
                 //search schools by culture
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter dr = new MySqlDataAdapter(sql, con);
@@ -59,8 +58,7 @@ namespace IE5120
                 this.ListView1.DataBind();
                 //bind data to listview
                 con.Close();
-
-            }            
+            }
         }
 
         void cnnDB()//this function is for database connection
@@ -68,7 +66,7 @@ namespace IE5120
             string conn = "Data Source=ie5120mysql.cgos91z1jnbd.ap-southeast-2.rds.amazonaws.com;User ID=itmaniacs;Password=itmaniacs;DataBase=ie5120mysql";
             MySqlConnection con = new MySqlConnection(conn);
             con.Open();
-            string sql = "select * from schools where language='" + cul + "' order by ICSEAVALUE";
+            string sql = "select * from library where culture='" + cul + "'";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataAdapter dr = new MySqlDataAdapter(sql, con);//read from database
             DataSet ds = new DataSet();
@@ -84,7 +82,7 @@ namespace IE5120
             string conn = "Data Source=ie5120mysql.cgos91z1jnbd.ap-southeast-2.rds.amazonaws.com;User ID=itmaniacs;Password=itmaniacs;DataBase=ie5120mysql";
             MySqlConnection con = new MySqlConnection(conn);
             con.Open();
-            string sql = "select * from schools where language='" + cul + "' and (surburb like '%" + keyword + "%' or schoolname like '%" + keyword + "%') order by ICSEAVALUE";
+            string sql = "select * from library where culture='" + cul + "' and (address like '%" + keyword + "%' or name like '%" + keyword + "%')";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataAdapter dr = new MySqlDataAdapter(sql, con);//read from database
             DataSet ds = new DataSet();
@@ -94,51 +92,32 @@ namespace IE5120
             con.Close();
         }
 
-       
 
         protected void Button1_Click(object sender, EventArgs e)//searching schools by suburb or names
         {
-            string cul = Session["culture"].ToString();            
+            string cul = Session["culture"].ToString();
             string keyword = TextBox1.Text;
             string conn = "Data Source=ie5120mysql.cgos91z1jnbd.ap-southeast-2.rds.amazonaws.com;User ID=itmaniacs;Password=itmaniacs;DataBase=ie5120mysql";
             MySqlConnection con = new MySqlConnection(conn);
             con.Open();
-            string sql = "select * from schools where language='" + cul + "' and (surburb like '%" + keyword + "%' or schoolname like '%"+keyword+"%') order by ICSEAVALUE DESC";
+            string sql = "select * from library where culture='" + cul + "' and (address like '%" + keyword + "%' or name like '%" + keyword + "%')";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             DataSet ds = new DataSet();
             MySqlDataAdapter dr = new MySqlDataAdapter(sql, con);
             dr.Fill(ds);
-            if (ds.Tables[0].Rows.Count==0)// if there is no record in result, enable the div eptid at foreground
+            if (ds.Tables[0].Rows.Count == 0)// if there is no record in result, enable the div eptid at foreground
             {
                 ept = "empty";
-                eptid.Style.Add("display","block");
+                //eptid.Style.Add("display", "block");
             }
             else
             {
-                eptid.Style.Add("display","none");
+                //eptid.Style.Add("display", "none");
             }
             this.ListView1.DataSource = ds;
             this.ListView1.DataBind();
             con.Close();
-            
-        }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            Session["culture"] = "Chinese (Mandarin)";
-            Response.Redirect("Schools.aspx");
-        }
-
-        protected void LinkButton2_Click(object sender, EventArgs e)
-        {
-            Session["culture"] = "Italian";
-            Response.Redirect("Schools.aspx");
-        }
-
-        protected void LinkButton3_Click(object sender, EventArgs e)
-        {
-            Session["culture"] = "Hindi";
-            Response.Redirect("Schools.aspx");
         }
 
         protected void ListPage_PreRender(object sender, EventArgs e)
@@ -147,7 +126,7 @@ namespace IE5120
             string conn = "Data Source=ie5120mysql.cgos91z1jnbd.ap-southeast-2.rds.amazonaws.com;User ID=itmaniacs;Password=itmaniacs;DataBase=ie5120mysql";
             MySqlConnection con = new MySqlConnection(conn);
             con.Open();
-            string sql = "select * from schools where language='" + cul + "' and (surburb like '%" + keyword + "%' or schoolname like '%" + keyword + "%') order by ICSEAVALUE DESC";
+            string sql = "select * from library where culture='" + cul + "' and (address like '%" + keyword + "%' or name like '%" + keyword + "%')";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataAdapter dr = new MySqlDataAdapter(sql, con);//read from database
             DataSet ds = new DataSet();
@@ -161,11 +140,11 @@ namespace IE5120
         {
             DataPager1.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
             //control datapager component
-            cnnDB();            
+            cnnDB();
         }
 
         protected void LinkButton5_Click(object sender, EventArgs e)
-        {           
+        {
             Response.Redirect("Schools.aspx");
         }
 
@@ -173,12 +152,31 @@ namespace IE5120
         {
             Response.Redirect("Community.aspx");
         }
-        protected void LinkButton11_Click(object sender, EventArgs e)
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            Session["culture"] = "Chinese (Mandarin)";
+            Response.Redirect("Schools.aspx");
+        }
+
+        protected void LinkButton8_Click(object sender, EventArgs e)
+        {
+            Session["culture"] = "Hindi";
+            Response.Redirect("Schools.aspx");
+        }
+
+        protected void LinkButton9_Click(object sender, EventArgs e)
+        {
+            Session["culture"] = "Italian";
+            Response.Redirect("Schools.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
         {
             Response.Redirect("Population.aspx");
         }
 
-        protected void LinkButton12_Click(object sender, EventArgs e)
+        protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Response.Redirect("Library.aspx");
         }

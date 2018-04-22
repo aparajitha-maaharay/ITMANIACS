@@ -62,3 +62,18 @@
     width:auto;
     margin-right:5px;
 }
+
+
+.stats {
+    overflow: hidden;
+    outline: solid;
+    border-color: lightgray;
+}
+
+i.dollar2 {
+    background: #808080;
+}
+
+i.dollar3 {
+    background: #ADD8E6;
+}
