@@ -1,28 +1,14 @@
-﻿html,body {
-    height:100%;
-    padding:0;
-}
-
-
-
-.navbar a img{
+﻿/*.navbar a img{
     width:100px;
-}
+}*/
 
 .home-page-background {
-    margin-top: -70px;
-    height: 99.5%;
-    width:100%;
-    background: url("../indexcss/images/melbourne.jpg") center no-repeat;
+   background-color:rgba(0,0,0,0.4);
     background-size:cover;
 }
 
-.homepage-caption {
-    background-color:rgba(0,0,0,0.4);
-    color:white;
-    position:center;
-    text-align:center;
-    padding-top:150px;
+/*.homepage-caption {
+    
     background-size:cover;
     height:100%; 
 }
@@ -35,14 +21,19 @@
 
 .navbar navbar-inverse{
     height: 50px;
-}
+}*/
 
 
 .effect-oscar{
     padding:20px;
 }
 
-#form1{
+/*table tbody td {
+    padding: 8px 5px;
+    display: inline-block;
+    width: 800px;
+}*/
+/*#form1{
     height:100%;
 }
 
@@ -76,4 +67,4 @@ i.dollar2 {
 
 i.dollar3 {
     background: #ADD8E6;
-}
+}*/

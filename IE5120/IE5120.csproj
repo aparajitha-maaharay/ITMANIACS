@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GMaps">
+      <HintPath>..\..\..\..\..\Desktop\GMaps.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -80,9 +83,7 @@
     <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
-    <Content Include="Community.aspx" />
     <Content Include="css\main.css" />
-    <Content Include="Details.aspx" />
     <Content Include="dv\css\animate.css" />
     <Content Include="dv\css\bootstrap.css" />
     <Content Include="dv\css\custom.css" />
@@ -149,10 +150,229 @@
     <Content Include="dv\js\SimpleChart.js" />
     <Content Include="dv\js\utils.js" />
     <Content Include="dv\js\validator.min.js" />
-    <Content Include="error.html" />
     <Content Include="err\images\404.png" />
+    <Content Include="events_italy.js" />
+    <Content Include="events_italy.html" />
+    <Content Include="events_india.js" />
+    <Content Include="events_india.html" />
+    <Content Include="events_china.html" />
+    <Content Include="events_china.js" />
+    <Content Include="exchange\404.html" />
+    <Content Include="exchange\Allbooks.aspx" />
+    <Content Include="exchange\assets\bxslider\images\bx_loader.gif" />
+    <Content Include="exchange\assets\bxslider\images\left-hover.png" />
+    <Content Include="exchange\assets\bxslider\images\left.png" />
+    <Content Include="exchange\assets\bxslider\images\right-hover.png" />
+    <Content Include="exchange\assets\bxslider\images\right.png" />
+    <Content Include="exchange\assets\bxslider\jquery.bxslider.css" />
+    <Content Include="exchange\assets\bxslider\jquery.bxslider.js" />
+    <Content Include="exchange\assets\bxslider\jquery.bxslider.min.js" />
+    <Content Include="exchange\BooksDetails.aspx" />
+    <Content Include="exchange\Contact.aspx" />
+    <Content Include="exchange\css\animate.css" />
+    <Content Include="exchange\css\bootstrap-reset.css" />
+    <Content Include="exchange\css\bootstrap-social.css" />
+    <Content Include="exchange\css\bootstrap-theme.css" />
+    <Content Include="exchange\css\bootstrap-theme.min.css" />
+    <Content Include="exchange\css\bootstrap.css" />
+    <Content Include="exchange\css\bootstrap.min.css" />
+    <Content Include="exchange\css\component.css" />
+    <Content Include="exchange\css\flexslider.css" />
+    <Content Include="exchange\css\magnific-popup.css" />
+    <Content Include="exchange\css\mixitup.css" />
+    <Content Include="exchange\css\parallax-slider\parallax-slider.css" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\css\sequencejs-theme.apple-style.css" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\bg-controls.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\bt-next.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\bt-pause.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\bt-play.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\bt-prev.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\ipad-shadow.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\ipad.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\iphone-shadow.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\iphone.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\pause-icon.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\sequence-logo.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\images\status-bar.png" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\index.html" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scripts\jquery-min.js" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scripts\jquery.ba-hashchange.min.js" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scripts\jquery.js" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scripts\jquery.sequence-min.js" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scripts\jquery.sequence.js" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\sequencejs-options.apple-style.js" />
+    <Content Include="exchange\css\seq-slider\apple-style\license-free-theme.txt" />
+    <Content Include="exchange\css\seq-slider\apple-style\readme-free.txt" />
+    <Content Include="exchange\css\seq-slider\apple-style\release-history.txt" />
+    <Content Include="exchange\css\seq-slider\apple-style\sequence-apple-style.jpg" />
+    <Content Include="exchange\css\seq-slider\sequencejs-theme.apple-style.css" />
+    <Content Include="exchange\css\seq-slider\sequencejs-theme.modern-slide-in.css" />
+    <Content Include="exchange\css\seq-slider\sequencejs-theme.sliding-horizontal-parallax.css" />
+    <Content Include="exchange\css\style-responsive.css" />
+    <Content Include="exchange\css\style.css" />
+    <Content Include="exchange\css\superfish-vertical.css" />
+    <Content Include="exchange\css\superfish.css" />
+    <Content Include="exchange\css\theme.css" />
+    <Content Include="exchange\Culture.aspx" />
+    <Content Include="exchange\Dashboard.aspx" />
+    <Content Include="exchange\DeleteBooks.aspx" />
+    <Content Include="exchange\china.js" />
+    <Content Include="exchange\india.js" />
+    <Content Include="exchange\Introduction.aspx" />
+    <Content Include="exchange\italy.js" />
+    <Content Include="exchange\ExchangeBooks.aspx" />
+    <Content Include="exchange\ExchangeBooksDetails.aspx" />
+    <Content Include="exchange\ExchangeHomepage.aspx" />
+    <Content Include="exchange\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="exchange\img\1.png" />
+    <Content Include="exchange\img\2.png" />
+    <Content Include="exchange\img\3.png" />
+    <Content Include="exchange\img\bg_direction_nav.png" />
+    <Content Include="exchange\img\blog\blog-thumb-1.jpg" />
+    <Content Include="exchange\img\blog\blog-thumb-2.jpg" />
+    <Content Include="exchange\img\blog\blog-thumb-3.jpg" />
+    <Content Include="exchange\img\blog\img3.jpg" />
+    <Content Include="exchange\img\blog\img4.jpg" />
+    <Content Include="exchange\img\blog\img5.jpg" />
+    <Content Include="exchange\img\blog\img6.jpg" />
+    <Content Include="exchange\img\blog\img7.jpg" />
+    <Content Include="exchange\img\blog\img8.jpg" />
+    <Content Include="exchange\img\book1.png" />
+    <Content Include="exchange\img\book2.png" />
+    <Content Include="exchange\img\book3.png" />
+    <Content Include="exchange\img\books.png" />
+    <Content Include="exchange\img\china.jpg" />
+    <Content Include="exchange\img\clients\graylogo6.png" />
+    <Content Include="exchange\img\clients\newlogo6.png" />
+    <Content Include="exchange\img\dashboard.jpg" />
+    <Content Include="exchange\img\events.png" />
+    <Content Include="exchange\img\india.jpg" />
+    <Content Include="exchange\img\ipadwhite.png" />
+    <Content Include="exchange\img\italy.jpg" />
+    <Content Include="exchange\img\link-icon.png" />
+    <Content Include="exchange\img\mob1.png" />
+    <Content Include="exchange\img\nbg.jpg" />
+    <Content Include="exchange\img\parallax-slider\images\1.png" />
+    <Content Include="exchange\img\parallax-slider\images\12.png" />
+    <Content Include="exchange\img\parallax-slider\images\2.png" />
+    <Content Include="exchange\img\parallax-slider\images\21.png" />
+    <Content Include="exchange\img\parallax-slider\images\3.png" />
+    <Content Include="exchange\img\parallax-slider\images\31.png" />
+    <Content Include="exchange\img\parallax-slider\images\4.png" />
+    <Content Include="exchange\img\parallax-slider\images\arrows.png" />
+    <Content Include="exchange\img\parallax-slider\images\bg.png" />
+    <Content Include="exchange\img\parallax-slider\images\ImageAttribution.txt" />
+    <Content Include="exchange\img\parallax-slider\images\main-bg.jpg" />
+    <Content Include="exchange\img\parallax-slider\images\waves.gif" />
+    <Content Include="exchange\img\person_1.png" />
+    <Content Include="exchange\img\person_2.png" />
+    <Content Include="exchange\img\person_3.png" />
+    <Content Include="exchange\img\portfolios\app\1.jpg" />
+    <Content Include="exchange\img\portfolios\app\2.jpg" />
+    <Content Include="exchange\img\portfolios\app\3.jpg" />
+    <Content Include="exchange\img\portfolios\app\4.jpg" />
+    <Content Include="exchange\img\portfolios\app\5.jpg" />
+    <Content Include="exchange\img\portfolios\card\1.jpg" />
+    <Content Include="exchange\img\portfolios\card\2.jpg" />
+    <Content Include="exchange\img\portfolios\card\3.jpg" />
+    <Content Include="exchange\img\portfolios\card\4.jpg" />
+    <Content Include="exchange\img\portfolios\icon\1.jpg" />
+    <Content Include="exchange\img\portfolios\icon\2.jpg" />
+    <Content Include="exchange\img\portfolios\icon\3.jpg" />
+    <Content Include="exchange\img\portfolios\icon\4.jpg" />
+    <Content Include="exchange\img\portfolios\icon\5.jpg" />
+    <Content Include="exchange\img\portfolios\logo\1.jpg" />
+    <Content Include="exchange\img\portfolios\logo\2.jpg" />
+    <Content Include="exchange\img\portfolios\logo\3.jpg" />
+    <Content Include="exchange\img\portfolios\logo\4.jpg" />
+    <Content Include="exchange\img\portfolios\logo\5.jpg" />
+    <Content Include="exchange\img\portfolios\logo\6.jpg" />
+    <Content Include="exchange\img\portfolios\logo\7.jpg" />
+    <Content Include="exchange\img\portfolios\web\1.jpg" />
+    <Content Include="exchange\img\portfolios\web\2.jpg" />
+    <Content Include="exchange\img\portfolios\web\3.jpg" />
+    <Content Include="exchange\img\portfolios\web\4.jpg" />
+    <Content Include="exchange\img\product1.jpg" />
+    <Content Include="exchange\img\product2.jpg" />
+    <Content Include="exchange\img\search-icon.jpg" />
+    <Content Include="exchange\img\search-icon.png" />
+    <Content Include="exchange\img\seq-slider\abstract-16729_1920.jpg" />
+    <Content Include="exchange\img\seq-slider\aeroplane.png" />
+    <Content Include="exchange\img\seq-slider\balloon.png" />
+    <Content Include="exchange\img\seq-slider\bg-clouds.png" />
+    <Content Include="exchange\img\seq-slider\bg-controls.png" />
+    <Content Include="exchange\img\seq-slider\bg-sky.png" />
+    <Content Include="exchange\img\seq-slider\bt-next-a.png" />
+    <Content Include="exchange\img\seq-slider\bt-next-gr.png" />
+    <Content Include="exchange\img\seq-slider\bt-next.png" />
+    <Content Include="exchange\img\seq-slider\bt-pause.png" />
+    <Content Include="exchange\img\seq-slider\bt-play.png" />
+    <Content Include="exchange\img\seq-slider\bt-prev-a.png" />
+    <Content Include="exchange\img\seq-slider\bt-prev-gr.png" />
+    <Content Include="exchange\img\seq-slider\bt-prev.png" />
+    <Content Include="exchange\img\seq-slider\ipad-shadow.png" />
+    <Content Include="exchange\img\seq-slider\ipad.png" />
+    <Content Include="exchange\img\seq-slider\ipad2.png" />
+    <Content Include="exchange\img\seq-slider\ipad_demo.png" />
+    <Content Include="exchange\img\seq-slider\iphone-shadow.png" />
+    <Content Include="exchange\img\seq-slider\iphone.png" />
+    <Content Include="exchange\img\seq-slider\iphone_demo.png" />
+    <Content Include="exchange\img\seq-slider\kite.png" />
+    <Content Include="exchange\img\seq-slider\pause-icon.png" />
+    <Content Include="exchange\img\seq-slider\sequence-logo.png" />
+    <Content Include="exchange\img\seq-slider\status-bar.png" />
+    <Content Include="exchange\img\service1.jpg" />
+    <Content Include="exchange\img\service2.jpg" />
+    <Content Include="exchange\img\service3.jpg" />
+    <Content Include="exchange\img\service4.jpg" />
+    <Content Include="exchange\img\service5.jpg" />
+    <Content Include="exchange\img\tab1.png" />
+    <Content Include="exchange\img\team\bg.png" />
+    <Content Include="exchange\img\team\member1.jpg" />
+    <Content Include="exchange\img\team\member2.jpg" />
+    <Content Include="exchange\img\team\member3.jpg" />
+    <Content Include="exchange\img\team\member4.jpg" />
+    <Content Include="exchange\img\team\placeholder.gif" />
+    <Content Include="exchange\img\tg-black-bg.png" />
+    <Content Include="exchange\img\triangle.png" />
+    <Content Include="exchange\img\works\img10.jpg" />
+    <Content Include="exchange\img\works\img11.jpg" />
+    <Content Include="exchange\img\works\img12.jpg" />
+    <Content Include="exchange\img\works\img13.jpg" />
+    <Content Include="exchange\img\works\img8.jpg" />
+    <Content Include="exchange\img\works\img9.jpg" />
+    <Content Include="exchange\index.aspx" />
+    <Content Include="exchange\js\bootstrap.js" />
+    <Content Include="exchange\js\bootstrap.min.js" />
+    <Content Include="exchange\js\common-scripts.js" />
+    <Content Include="exchange\js\hover-dropdown.js" />
+    <Content Include="exchange\js\html5shiv.js" />
+    <Content Include="exchange\js\jquery-1.8.3.min.js" />
+    <Content Include="exchange\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="exchange\js\jquery.easing.min.js" />
+    <Content Include="exchange\js\jquery.flexslider.js" />
+    <Content Include="exchange\js\jquery.js" />
+    <Content Include="exchange\js\jquery.magnific-popup.js" />
+    <Content Include="exchange\js\jquery.parallax-1.1.3.js" />
+    <Content Include="exchange\js\link-hover.js" />
+    <Content Include="exchange\js\mixitup.js" />
+    <Content Include="exchange\js\parallax-slider\jquery.cslider.js" />
+    <Content Include="exchange\js\parallax-slider\modernizr.custom.28468.js" />
+    <Content Include="exchange\js\seq-slider\jquery.ba-hashchange.min.js" />
+    <Content Include="exchange\js\seq-slider\jquery.sequence-min.js" />
+    <Content Include="exchange\js\seq-slider\jquery.sequence.js" />
+    <Content Include="exchange\js\seq-slider\sequencejs-options.apple-style.js" />
+    <Content Include="exchange\js\seq-slider\sequencejs-options.modern-slide-in.js" />
+    <Content Include="exchange\js\seq-slider\sequencejs-options.sliding-horizontal-parallax.js" />
+    <Content Include="exchange\js\superfish.js" />
+    <Content Include="exchange\js\wow.min.js" />
+    <Content Include="exchange\Login.aspx" />
+    <Content Include="exchange\MyBooks.aspx" />
+    <Content Include="exchange\Regi.aspx" />
     <Content Include="images\chncul.png" />
+    <Content Include="images\collapse.png" />
     <Content Include="images\cul_icon.ico" />
+    <Content Include="images\expand.png" />
     <Content Include="images\indcul.png" />
     <Content Include="images\itacul.png" />
     <Content Include="images\logocul.png" />
@@ -167,7 +387,6 @@
     <Content Include="images\portfolio\italy.png" />
     <Content Include="images\team\Ollie.PNG" />
     <Content Include="images\team\wei.PNG" />
-    <Content Include="index.aspx" />
     <Content Include="index.html" />
     <Content Include="indexcss\css\foundation.css" />
     <Content Include="indexcss\css\foundation.min.css" />
@@ -220,8 +439,7 @@
     <Content Include="indexcss\js\vendor\jquery.js" />
     <Content Include="indexcss\js\vendor\modernizr.js" />
     <Content Include="indexcss\js\vendor\placeholder.js" />
-    <Content Include="Library.aspx" />
-    <Content Include="LibraryMap.aspx" />
+    <Content Include="jquery-3.3.1.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
@@ -247,6 +465,16 @@
     <Content Include="bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="bootstrap\js\bootstrap.js.map" />
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\.DS_Store" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\css\.DS_Store" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scripts\.DS_Store" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scss\.DS_Store" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scss\partials\mixins.scss" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scss\partials\reset.scss" />
+    <Content Include="exchange\css\seq-slider\apple-style\apple-style\scss\sequencejs-theme.apple-style.scss" />
+    <Content Include="exchange\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="exchange\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="exchange\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -271,7 +499,6 @@
     <Content Include="assets\wow\wow.min.js" />
     <Content Include="css\style.css" />
     <Content Include="css\stylecss.css" />
-    <Content Include="Homepage.aspx" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\lab.jpg" />
     <Content Include="images\lines.png" />
@@ -313,56 +540,108 @@
     <Content Include="images\team\7.jpg" />
     <Content Include="images\team\8.jpg" />
     <Content Include="images\team\9.jpg" />
-    <Content Include="Population.aspx" />
-    <Content Include="Schools.aspx" />
-    <Content Include="SchoolsMap.aspx" />
-    <Content Include="tableau.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Community.aspx.cs">
-      <DependentUpon>Community.aspx</DependentUpon>
+    <Compile Include="exchange\Allbooks.aspx.cs">
+      <DependentUpon>Allbooks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Community.aspx.designer.cs">
-      <DependentUpon>Community.aspx</DependentUpon>
+    <Compile Include="exchange\Allbooks.aspx.designer.cs">
+      <DependentUpon>Allbooks.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Details.aspx.cs">
-      <DependentUpon>Details.aspx</DependentUpon>
+    <Compile Include="exchange\BooksDetails.aspx.cs">
+      <DependentUpon>BooksDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Details.aspx.designer.cs">
-      <DependentUpon>Details.aspx</DependentUpon>
+    <Compile Include="exchange\BooksDetails.aspx.designer.cs">
+      <DependentUpon>BooksDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Homepage.aspx.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
+    <Compile Include="exchange\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Homepage.aspx.designer.cs">
-      <DependentUpon>Homepage.aspx</DependentUpon>
+    <Compile Include="exchange\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
+    <Compile Include="exchange\Culture.aspx.cs">
+      <DependentUpon>Culture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exchange\Culture.aspx.designer.cs">
+      <DependentUpon>Culture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exchange\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exchange\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exchange\DeleteBooks.aspx.cs">
+      <DependentUpon>DeleteBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exchange\DeleteBooks.aspx.designer.cs">
+      <DependentUpon>DeleteBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exchange\ExchangeBooks.aspx.cs">
+      <DependentUpon>ExchangeBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exchange\ExchangeBooks.aspx.designer.cs">
+      <DependentUpon>ExchangeBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exchange\ExchangeBooksDetails.aspx.cs">
+      <DependentUpon>ExchangeBooksDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exchange\ExchangeBooksDetails.aspx.designer.cs">
+      <DependentUpon>ExchangeBooksDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exchange\ExchangeHomepage.aspx.cs">
+      <DependentUpon>ExchangeHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exchange\ExchangeHomepage.aspx.designer.cs">
+      <DependentUpon>ExchangeHomepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exchange\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
+    <Compile Include="exchange\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Library.aspx.cs">
-      <DependentUpon>Library.aspx</DependentUpon>
+    <Compile Include="exchange\Introduction.aspx.cs">
+      <DependentUpon>Introduction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Library.aspx.designer.cs">
-      <DependentUpon>Library.aspx</DependentUpon>
+    <Compile Include="exchange\Introduction.aspx.designer.cs">
+      <DependentUpon>Introduction.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LibraryMap.aspx.cs">
-      <DependentUpon>LibraryMap.aspx</DependentUpon>
+    <Compile Include="exchange\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LibraryMap.aspx.designer.cs">
-      <DependentUpon>LibraryMap.aspx</DependentUpon>
+    <Compile Include="exchange\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exchange\MyBooks.aspx.cs">
+      <DependentUpon>MyBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exchange\MyBooks.aspx.designer.cs">
+      <DependentUpon>MyBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="exchange\Regi.aspx.cs">
+      <DependentUpon>Regi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="exchange\Regi.aspx.designer.cs">
+      <DependentUpon>Regi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -371,30 +650,20 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Population.aspx.cs">
-      <DependentUpon>Population.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Population.aspx.designer.cs">
-      <DependentUpon>Population.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Schools.aspx.cs">
-      <DependentUpon>Schools.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Schools.aspx.designer.cs">
-      <DependentUpon>Schools.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SchoolsMap.aspx.cs">
-      <DependentUpon>SchoolsMap.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SchoolsMap.aspx.designer.cs">
-      <DependentUpon>SchoolsMap.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="exchange\assets\font-awesome\" />
+    <Folder Include="exchange\assets\owlcarousel\" />
+    <Folder Include="exchange\css\seq-slider\apple-style\__MACOSX\apple-style\css\" />
+    <Folder Include="exchange\css\seq-slider\apple-style\__MACOSX\apple-style\images\" />
+    <Folder Include="exchange\css\seq-slider\apple-style\__MACOSX\apple-style\scripts\" />
+    <Folder Include="exchange\css\seq-slider\apple-style\__MACOSX\apple-style\scss\" />
+    <Folder Include="exchange\img\banner\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

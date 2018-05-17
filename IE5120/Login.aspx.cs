@@ -20,7 +20,7 @@ namespace IE5120
             string pwd = TextBox2.Text;
             if (name.Equals("ITMANIACS")&&pwd.Equals("ITMANIACS"))
             {
-                Response.Redirect("index.aspx");
+                Response.Redirect("exchange/index.aspx");
             }
             else
             {
